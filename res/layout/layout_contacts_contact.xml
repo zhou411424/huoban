@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <include
+        android:id="@+id/contacts_contact_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        layout="@layout/title_bar_with_ibtn_left_and_right" />
+
+    <RelativeLayout
+        android:id="@+id/contacts_contact_search_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/contacts_contact_search"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/padding_default"
+            android:layout_toLeftOf="@+id/contacts_contact_cancel"
+            android:background="@null"
+            android:drawableLeft="@drawable/black_search"
+            android:drawablePadding="0dp"
+            android:hint="请输入搜索内容"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/contacts_contact_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/padding_default"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="取消"
+            android:textColor="@color/foot_orange" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/contacts_contact_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/contacts_contact_title_bar"
+        android:layout_marginLeft="@dimen/padding_default"
+        android:layout_marginRight="@dimen/padding_default"
+        android:scrollbars="none" >
+    </ListView>
+
+</RelativeLayout>

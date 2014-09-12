@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <include
+        android:id="@+id/contacts_add_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        layout="@layout/title_bar_with_ibtn_left_and_right" />
+
+    <TextView
+        android:id="@+id/contacts_add_do_search"
+        android:layout_width="wrap_content"
+        android:layout_height="50dip"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/contacts_add_title_bar"
+        android:layout_marginRight="@dimen/padding_default"
+        android:drawableLeft="@drawable/red_searcho"
+        android:gravity="center"
+        android:padding="12dip"
+        android:textColor="@color/foot_orange" />
+
+    <com.example.huoban.widget.other.ClearEditText
+        android:id="@+id/contacts_add_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_below="@id/contacts_add_title_bar"
+        android:layout_marginLeft="@dimen/padding_default"
+        android:layout_marginRight="12dip"
+        android:layout_toLeftOf="@id/contacts_add_do_search"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:hint="@string/member_username_mobile"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="14sp" >
+    </com.example.huoban.widget.other.ClearEditText>
+
+    <TextView
+        android:id="@+id/username_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_below="@id/contacts_add_do_search"
+        android:layout_marginLeft="@dimen/padding_default"
+        android:layout_marginRight="@dimen/padding_default"
+        android:background="@drawable/pref_bg_body" />
+
+    <TextView
+        android:id="@+id/contacts_add_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_below="@+id/username_line"
+        android:layout_marginLeft="@dimen/padding_default"
+        android:layout_marginRight="@dimen/padding_default"
+        android:gravity="center_vertical"
+        android:text="@string/phone_contact"
+        android:textColor="@color/foot_black" />
+
+    <TextView
+        android:id="@+id/contact_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_below="@id/contacts_add_contacts"
+        android:layout_marginLeft="@dimen/padding_default"
+        android:layout_marginRight="@dimen/padding_default"
+        android:background="@drawable/pref_bg_body" />
+
+    <TextView
+        android:id="@+id/contacts_add_shaomiao"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_below="@+id/contact_line"
+        android:layout_marginLeft="@dimen/padding_default"
+        android:layout_marginRight="@dimen/padding_default"
+        android:gravity="center_vertical"
+        android:text="@string/member_saomiao"
+        android:textColor="@color/foot_black"
+        android:textSize="14sp" >
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_below="@id/contacts_add_shaomiao"
+        android:layout_marginLeft="@dimen/padding_default"
+        android:layout_marginRight="@dimen/padding_default"
+        android:background="@drawable/pref_bg_body" />
+
+</RelativeLayout>

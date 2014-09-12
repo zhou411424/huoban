@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" >
+
+    <include
+        android:id="@+id/contacts_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        layout="@layout/title_bar_with_ibtn_left_and_right" />
+
+    <com.example.huoban.widget.pull.ContactsListView
+        android:id="@+id/contacts_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/contacts_title_bar"
+        android:cacheColorHint="#00000000"
+        android:choiceMode="singleChoice"
+        android:descendantFocusability="blocksDescendants"
+        android:divider="@color/line"
+        android:dividerHeight="0.5dp"
+        android:paddingLeft="@dimen/padding_default"
+        android:paddingRight="@dimen/padding_default"
+        android:scrollbars="none"
+        swipe:swipeActionLeft="reveal"
+        swipe:swipeAnimationTime="0"
+        swipe:swipeBackView="@+id/contacts_item_back"
+        swipe:swipeCloseAllItemsWhenMoveList="true"
+        swipe:swipeFrontView="@+id/contacts_item_front"
+        swipe:swipeMode="left"
+        swipe:swipeOffsetLeft="0dp"
+        swipe:swipeOffsetRight="0dp"
+        swipe:swipeOpenOnLongPress="false" />
+
+</RelativeLayout>

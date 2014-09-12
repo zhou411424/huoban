@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ClickableViewAccessibility">
+        <ignore path="src/com/example/huoban/activity/my/userinfo/image/ClipImageView.java" />
+    </issue>
+    <issue id="DrawAllocation">
+        <ignore path="src/com/example/huoban/activity/my/contacts/view/ViewfinderView.java" />
+        <ignore path="src/com/example/huoban/activity/my/userinfo/image/ClipView.java" />
+    </issue>
+    <issue id="HandlerLeak" severity="ignore" />
+    <issue id="NewApi">
+        <ignore path="src/com/example/huoban/activity/my/userinfo/image/ClipImageView.java" />
+    </issue>
+    <issue id="ValidFragment">
+        <ignore path="src/com/example/huoban/activity/question/QuestionFragment.java" />
+        <ignore path="src/com/example/huoban/activity/question/fragment/AllQuestionFragment.java" />
+        <ignore path="src/com/example/huoban/activity/question/fragment/MyQuestionFragment.java" />
+    </issue>
+</lint>

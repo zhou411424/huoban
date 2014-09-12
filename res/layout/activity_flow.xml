@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include android:id="@+id/title_bar" layout="@layout/title_bar_with_ibtn_left_and_right" />
+
+    <LinearLayout
+        android:id="@+id/viewTop"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/title_bar"
+        android:background="@drawable/bg_zhoushou_top"
+        android:orientation="vertical" >
+
+        <com.example.huoban.widget.other.GalleryFlow
+            android:id="@+id/flow"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:spacing="10dp" >
+        </com.example.huoban.widget.other.GalleryFlow>
+
+        <RadioGroup
+            android:id="@+id/rgCateMaterial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:checkedButton="@+id/rbCate"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rbCate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rb_left_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:paddingLeft="18dp"
+                android:paddingRight="14dp"
+                android:paddingTop="8dp"
+                android:text="@string/construction_procedure"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:id="@+id/rbMaterial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rb_right_selector"
+                android:button="@null"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="12dp"
+                android:paddingTop="8dp"
+                android:text="@string/material"
+                android:textColor="@color/foot_orange"
+                android:textSize="14sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/viewTop"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+</RelativeLayout>

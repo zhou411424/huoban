@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.huoban"
+    android:versionCode="12"
+    android:versionName="2.10.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CAMERA" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 读取联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- Baidu Push -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!-- for log. -->
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- Baidu Push end -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <application
+        android:name="com.example.huoban.application.HuoBanApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/huoban"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.huoban.login.LoadingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.LoginAndRegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name=".activity.HomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity android:name="com.example.huoban.activity.my.UserInfoActivity" >
+        </activity>
+        <activity android:name="com.example.huoban.activity.my.ContactsActivity" >
+        </activity>
+        <activity
+            android:name="com.example.huoban.activity.my.contacts.ContactAddActivity"
+            android:windowSoftInputMode="stateAlwaysVisible" >
+        </activity>
+        <activity
+            android:name=".assistant.FlowActivity"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+
+            <!-- 禁用硬件加速 -->
+        </activity>
+        <activity
+            android:name=".assistant.ViewFlipperActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".assistant.MyWalletActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.diary.SearchDiaryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.diary.DiaryDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".assistant.TransactionActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".assistant.OrderDetailsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".assistant.ConsultActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".assistant.OrderSummaryActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".assistant.QuestionDetailsWebActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".assistant.OnlineServiceActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".assistant.DiscussListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name=".assistant.ContentAddActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".assistant.BanaDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.example.huoban.activity.my.TreasureBoxActivity" />
+        <activity android:name="com.example.huoban.activity.my.MoreSourceActivity" />
+        <activity android:name="com.example.huoban.activity.my.OtherActivity" />
+        <activity
+            android:name="com.example.huoban.activity.my.userinfo.NickNameActivity"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity android:name="com.example.huoban.activity.my.userinfo.SexSetActivity" />
+        <activity
+            android:name="com.example.huoban.activity.my.contacts.RemarkContactActivity"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity android:name="com.example.huoban.activity.my.userinfo.ImageCodeActivity" />
+        <activity
+            android:name="com.example.huoban.activity.my.userinfo.ChangePWActivity"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity android:name="com.example.huoban.activity.my.userinfo.RenovationPhaseActivity" />
+        <activity
+            android:name="com.example.huoban.activity.account.AccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeB" >
+        </activity>
+        <activity
+            android:name="com.example.huoban.activity.account.AddAcountActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.partner.AddAcountActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.plan.PlanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeB" >
+        </activity>
+        <activity
+            android:name=".activity.plan.AddOrUpdatePlanActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" >
+        </activity>
+        <activity
+            android:name="com.example.huoban.activity.account.AccountSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAnimation" >
+        </activity>
+        <activity
+            android:name=".activity.plan.SearchPlanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/noAnimation" >
+        </activity>
+        <activity
+            android:name=".activity.question.QuestionsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.question.MakeQuestionsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.question.QuestionDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.question.ExpertActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.question.ChoiseAlumPhotoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.question.FullSizeImageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.example.huoban.activity.my.contacts.SearchResultActivity" />
+        <activity android:name="com.example.huoban.activity.my.contacts.ContactInfoActivity" />
+        <activity android:name="com.example.huoban.activity.my.contacts.ContactsContactActivity" />
+        <activity android:name="com.example.huoban.activity.my.other.VersionHistoryActivity" />
+        <activity android:name="com.example.huoban.activity.my.other.SetPushMessage" />
+        <activity
+            android:name="com.example.huoban.activity.my.BudgetSetingActivity"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name="com.example.huoban.activity.my.contacts.chat.ChatActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.example.huoban.activity.my.userinfo.ClipImageActivity" />
+        <activity android:name="com.example.huoban.activity.my.userinfo.PreviewImageActivity" />
+        <activity
+            android:name="com.example.huoban.activity.my.other.SuggestionActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.example.huoban.activity.my.other.AboutActivity" />
+        <activity android:name="com.example.huoban.activity.my.contacts.imagecode.CaptureActivity" />
+        <activity
+            android:name=".activity.question.FeaturedQuestionActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.example.huoban.activity.my.other.ShareAppActivity" />
+
+        <service
+            android:name="com.example.huoban.service.BackService"
+            android:label="MessageService" >
+        </service>
+
+        <activity
+            android:name=".activity.circle.CircleActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.circle.PublishDynamicActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" >
+        </activity>
+        <activity
+            android:name="com.example.huoban.activity.my.AlbumActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 百度推送 -->
+        <!-- push service client -->
+        <receiver android:name="com.baidu.push.PushMessageReceiver" >
+            <intent-filter>
+
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+
+        <!-- push必须的receviver和service声明 -->
+        <receiver
+            android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service>
+        <!-- push结束 -->
+        <!-- 在百度开发者中心查询应用的API Key -->
+        <meta-data
+            android:name="api_key"
+            android:value="qLaIsCdsbBrEv4wW5ASfe4MI" />
+        <!-- 百度推送 -->
+
+        <activity
+            android:name=".activity.diary.DiaryBrowseActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.diary.DiaryGraduationPhotosActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.my.contacts.ContactInvitationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.example.huoban.activity.diary.MyDiaryActivity" />
+        <activity android:name="com.example.huoban.activity.diary.MyAttentionActivity" />
+        <activity android:name="com.example.huoban.activity.diary.MyCommentActivity" />
+        <activity android:name="com.example.huoban.activity.diary.MyRemindActivity" />
+        <activity android:name="com.example.huoban.activity.diary.DiaryCommentActivity" />
+        <activity android:name="com.example.huoban.activity.diary.CommentActivity" />
+        <activity android:name="com.example.huoban.activity.company.CompanyActivity" />
+
+        <!-- ShareSDK -->
+        <activity
+            android:name="cn.sharesdk.framework.ShareSDKUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name="com.example.huoban.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.baidu.push.PushDetailActicity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 百度统计 -->
+
+
+        <!-- 您从百度网站获取的APP KEY -->
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="042395b274" /> <!-- abcd1234 -->
+        <!-- 渠道商编号 -->
+        <meta-data
+            android:name="BaiduMobAd_CHANNEL"
+            android:value="UMENG_CHANNEL_VALUE" />
+
+        <!-- 是否开启错误日志统计，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_EXCEPTION_LOG"
+            android:value="true" />
+        <!-- 日志发送策略，可选值：APP_START、ONCE_A_DAY、SET_TIME_INTERVAL，默认为APP_START -->
+        <meta-data
+            android:name="BaiduMobAd_SEND_STRATEGY"
+            android:value="APP_START" />
+        <!-- 日志发送策略 为SET_TIME_INTERVAL时，需设定时间间隔(取消下行注释)。取值为1-24的整数，默认为1 -->
+        <!--
+             <meta-data android:name="BaiduMobAd_TIME_INTERVAL" android:value="2" 
+			/>
+        -->
+        <!-- 日志仅在wifi网络下发送，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_ONLY_WIFI"
+            android:value="false" />
+        <!-- 是否获取基站位置信息 ,默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_CELL_LOCATION"
+            android:value="true" />
+        <!-- 是否获取GPS位置信息，默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_GPS_LOCATION"
+            android:value="true" />
+        <!-- 是否获取WIFI位置信息，默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_WIFI_LOCATION"
+            android:value="true" />
+        <!-- 百度统计 end -->
+        <service
+            android:name=".service.PushService"
+            android:label="mqttService" >
+        </service>
+
+        <receiver android:name="com.example.huoban.activity.my.other.DownloadCompleteReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

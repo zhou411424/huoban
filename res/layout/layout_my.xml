@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff" >
+
+    <include
+        android:id="@+id/my_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        layout="@layout/title_bar_with_ibtn_left_and_right" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/my_title_bar"
+        android:background="@color/text_light_gray"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <include
+                android:id="@+id/my_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/layout_my_head" />
+
+            <LinearLayout
+                android:id="@+id/my_items_1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical" >
+
+                <com.example.huoban.widget.other.MyListItemView
+                    android:id="@+id/my_item_contacts"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+                </com.example.huoban.widget.other.MyListItemView>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line" />
+
+                <com.example.huoban.widget.other.MyListItemView
+                    android:id="@+id/my_item_diary"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+                </com.example.huoban.widget.other.MyListItemView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="15dp"
+                android:background="#efefef" />
+
+            <LinearLayout
+                android:id="@+id/my_items_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical" >
+
+                <com.example.huoban.widget.other.MyListItemView
+                    android:id="@+id/my_item_album"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" >
+                </com.example.huoban.widget.other.MyListItemView>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line"
+                    android:visibility="gone" />
+
+                <com.example.huoban.widget.other.MyListItemView
+                    android:id="@+id/my_item_zhuangxiujie"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+                </com.example.huoban.widget.other.MyListItemView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="15dp"
+                android:background="#efefef" />
+
+            <com.example.huoban.widget.other.MyListItemView
+                android:id="@+id/my_item_treasurebox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" >
+            </com.example.huoban.widget.other.MyListItemView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="15dp"
+                android:background="#efefef" />
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical" >
+
+                <com.example.huoban.widget.other.MyListItemView
+                    android:id="@+id/my_item_moresource"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+                </com.example.huoban.widget.other.MyListItemView>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/line" />
+
+                <com.example.huoban.widget.other.MyListItemView
+                    android:id="@+id/my_item_other"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+                </com.example.huoban.widget.other.MyListItemView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="15dp"
+                android:background="#efefef" />
+
+            <Button
+                android:id="@+id/log_out"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="30dip"
+                android:layout_marginRight="30dip"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/btn_logout_radius"
+                android:text="@string/log_out"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/line" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

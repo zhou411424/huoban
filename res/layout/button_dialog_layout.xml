@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/contact_info_cancelButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="#fff"
+        android:gravity="center"
+        android:paddingLeft="10dip"
+        android:text="@string/tip_forget_password"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:typeface="sans" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:background="@color/bg_color" />
+
+    <Button
+        android:id="@+id/contact_info_positiveButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="#fff"
+        android:gravity="center"
+        android:paddingLeft="10dip"
+        android:text="@string/tip_forget_password"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:typeface="sans" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:background="@color/bg_color" />
+
+    <Button
+        android:id="@+id/contact_info_negativeButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="#fff"
+        android:gravity="center"
+        android:paddingLeft="10dip"
+        android:text="@string/tip_error_password"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:typeface="sans" />
+
+</LinearLayout>

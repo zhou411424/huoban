@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/suggestion_tv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/suggetsion_left_bg"
+        android:text="感谢您对装修伙伴提出的宝贵建议！" />
+
+    <TextView
+        android:id="@+id/suggestion_tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/suggetsion_right_bg"
+        android:text="我觉得装修伙伴很不错哟O(∩_∩)O~" />
+
+</RelativeLayout>

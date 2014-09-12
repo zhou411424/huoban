@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout 
+    android:layout_height="wrap_content" 
+    android:layout_width="match_parent" 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"> 
+
+    <ImageView
+        android:id="@+id/iv_my_diary_icon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ico_remind"
+        android:visibility="visible" />
+    
+    <TextView 
+        android:id="@+id/tv_my_diary_title" 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        android:layout_centerVertical="true" 
+        android:textSize="@dimen/text_size_medium" 
+        android:layout_toRightOf="@+id/iv_my_diary_icon"
+        android:layout_marginRight="10dp" 
+        android:layout_marginLeft="10dp"/> 
+        
+    <ImageView 
+        android:id="@+id/iv_my_diary_update" 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        android:background="@drawable/ico_update" 
+        android:layout_centerVertical="true" 
+        android:layout_toRightOf="@+id/tv_my_diary_title" 
+        android:visibility="invisible"/> 
+    
+    <ImageView 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        android:background="@drawable/order_more" 
+        android:layout_centerVertical="true" 
+        android:layout_alignParentRight="true"/> 
+        
+</RelativeLayout>

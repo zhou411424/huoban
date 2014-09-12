@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <include
+        android:id="@+id/more_source_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        layout="@layout/title_bar_with_ibtn_left_and_right" />
+
+    <ListView
+        android:id="@+id/more_source_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/more_source_title_bar"
+        android:dividerHeight="0.5dp"
+        android:divider="@color/line"
+        android:paddingLeft="@dimen/padding_default"
+        android:paddingRight="@dimen/padding_default"
+        android:scrollbars="none" >
+    </ListView>
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@color/line" >
+
+    <com.example.huoban.widget.pull.PullToRefreshListView
+        android:id="@+id/PullToRefreshListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:dividerHeight="0dip"
+        android:dividerPadding="0dip"
+        android:divider="@color/line"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false" >
+    </com.example.huoban.widget.pull.PullToRefreshListView>
+
+    <include layout="@layout/title_bar_with_ibtn_left_and_right" />
+
+</RelativeLayout>

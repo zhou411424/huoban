@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/about_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        layout="@layout/title_bar_with_ibtn_left_and_right" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/about_title_bar"
+        android:paddingLeft="@dimen/padding_default"
+        android:paddingRight="@dimen/padding_default" >
+
+        <TextView
+            android:id="@+id/about_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_content" />
+
+        <TextView
+            android:id="@+id/about_content1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_content"
+            android:layout_marginTop="20dip"
+            android:text="@string/about_contact1" />
+
+        <TextView
+            android:id="@+id/about_content2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_content1"
+            android:layout_marginTop="5dip"
+            android:text="@string/about_contact2" />
+
+        <TextView
+            android:id="@+id/about_content3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/about_content2"
+            android:layout_below="@id/about_content1"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@+id/about_content2"
+            android:text="@string/about_contact4"
+            android:textColor="@color/foot_orange" />
+
+        <TextView
+            android:id="@+id/about_content4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_content2"
+            android:layout_marginTop="5dip"
+            android:text="@string/about_contact3" />
+
+        <TextView
+            android:id="@+id/about_content5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/about_content4"
+            android:layout_marginTop="50dip"
+            android:text="@string/about_contact5"
+            android:textColor="@color/blue"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

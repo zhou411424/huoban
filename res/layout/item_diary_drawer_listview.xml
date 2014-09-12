@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp" >
+
+        <TextView
+            android:id="@+id/line_top"
+            android:layout_width="0.5dp"
+            android:layout_height="15dp"
+            android:layout_centerHorizontal="true"
+            android:background="#3f3d3d" />
+
+        <ImageView
+            android:id="@+id/black_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_top"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:contentDescription="@null"
+            android:src="@drawable/icon_diary_drawer_item" />
+
+        <TextView
+            android:id="@+id/line_bottom"
+            android:layout_width="0.5dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/black_circle"
+            android:layout_centerHorizontal="true"
+            android:background="#3f3d3d" />
+    </RelativeLayout>
+	<TextView android:id="@+id/tvPosition"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="毕业照"
+	    android:textColor="@color/white"
+	    android:layout_marginLeft="10dp"
+	    android:textSize="@dimen/text_size_medium"/>
+</LinearLayout>

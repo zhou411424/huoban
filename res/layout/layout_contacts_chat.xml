@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/chat_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        layout="@layout/title_bar_with_ibtn_left_and_right" />
+
+    <include
+        android:id="@+id/chat_send_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/layout_chat_message_send"
+        android:background="@color/defaule" />
+
+    <com.example.huoban.widget.pull.PullToRefreshListView
+        android:id="@+id/chat_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/chat_send_bar"
+        android:layout_below="@id/chat_title_bar"
+        android:background="#FFFFFF"
+        android:divider="@null"
+        android:paddingLeft="@dimen/padding_default"
+        android:paddingRight="@dimen/padding_default"
+        android:scrollbars="none" >
+    </com.example.huoban.widget.pull.PullToRefreshListView>
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/padding_top_default" >
+
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="@dimen/height_default"
+        android:layout_height="@dimen/height_default"
+        android:contentDescription="@null"
+        android:src="@drawable/ren" />
+
+    <TextView
+        android:id="@+id/tv_unreadCount"
+        android:layout_width="20dip"
+        android:layout_height="20dip"
+        android:layout_alignRight="@id/iv_head"
+        android:layout_alignTop="@id/iv_head"
+        android:background="@drawable/cycle"
+        android:contentDescription="@null"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_mis"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:layout_toRightOf="@id/iv_head"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_light_black"
+            android:textSize="@dimen/text_size_big_b" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/color_grey"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_below="@id/iv_head"
+        android:layout_marginTop="@dimen/padding_default"
+        android:background="@color/line" />
+
+</RelativeLayout>

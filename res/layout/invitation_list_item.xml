@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dip"
+    android:paddingTop="10dip" >
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/item_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/btn_orange"
+            android:padding="10dip"
+            android:text="@string/member_delete"
+            android:textColor="#fff"
+            android:textSize="14sp" >
+        </Button>
+
+        <Button
+            android:id="@+id/item_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_style_blue"
+            android:padding="10dip"
+            android:text="@string/member_add"
+            android:textColor="#fff"
+            android:textSize="14sp" >
+        </Button>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/red_member"
+        android:gravity="center"
+        android:drawablePadding="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_toLeftOf="@id/ll"
+        android:textSize="16sp" />
+
+</RelativeLayout>

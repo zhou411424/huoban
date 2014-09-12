@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar_with_word_right" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/rlAddAcount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/rlMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:background="#FFFAF7"
+                android:padding="15dp" >
+
+                <com.example.huoban.widget.other.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/ivUser"
+                    android:layout_width="70dip"
+                    android:layout_height="70dip"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ren"
+                    app:border_color="#fff"
+                    app:border_width="2dp" />
+
+                <EditText
+                    android:id="@+id/edMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="@string/zero"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="10dip"
+                    android:textColor="@color/foot_orange"
+                    android:textSize="@dimen/text_size_super_large" >
+
+                    <requestFocus />
+                </EditText>
+
+                <TextView
+                    android:id="@+id/account_amount_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/edMoney"
+                    android:gravity="right|center"
+                    android:text="@string/symbol_o"
+                    android:textColor="@color/foot_orange"
+                    android:textSize="@dimen/text_size_super_large" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_project"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/rlMoney"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="24dp"
+                android:paddingBottom="24dip"
+                android:text="@string/project"
+                android:textColor="@color/foot_black"
+                android:textSize="@dimen/text_size_small" />
+
+            <EditText
+                android:id="@+id/edProject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/tvDate"
+                android:layout_below="@+id/rlMoney"
+                android:layout_toRightOf="@+id/tv_project"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:hint="@string/add_new_account_msg"
+                android:paddingBottom="24dip"
+                android:paddingTop="24dip"
+                android:textColor="@color/foot_black"
+                android:textSize="@dimen/text_size_medium" >
+            </EditText>
+
+            <View
+                android:id="@+id/viewProject"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/edProject"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:background="@drawable/pref_bg_body" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/viewProject"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:paddingBottom="24dip"
+                android:paddingTop="24dip"
+                android:text="@string/time"
+                android:textColor="@color/foot_black"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_time"
+                android:layout_alignBottom="@+id/tv_time"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dip"
+                android:gravity="right"
+                android:paddingBottom="24dip"
+                android:paddingTop="24dip"
+                android:textColor="@color/foot_black"
+                android:textSize="@dimen/text_size_medium" />
+
+            <View
+                android:id="@+id/viewTime"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/tv_time"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:background="@drawable/pref_bg_body" />
+
+            <TextView
+                android:id="@+id/tvRemark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewTime"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:text="@string/remark"
+                android:textColor="@color/foot_black"
+                android:textSize="@dimen/text_size_small" />
+
+            <EditText
+                android:id="@+id/edRemark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvRemark"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:background="@null"
+                android:gravity="left|top"
+                android:hint="@string/add_introduce"
+                android:paddingBottom="50dip"
+                android:paddingTop="12dip"
+                android:textColor="@color/foot_black"
+                android:textSize="@dimen/text_size_medium" >
+            </EditText>
+
+            <View
+                android:id="@+id/ViewRemark"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/edRemark"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:background="@drawable/pref_bg_body" />
+
+            <Button
+                android:id="@+id/btnDel"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/ViewRemark"
+                android:layout_marginLeft="15dip"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/ic_del_account"
+                android:padding="15dip"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

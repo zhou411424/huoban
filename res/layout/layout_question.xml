@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <include
+        android:id="@+id/question_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        layout="@layout/title_bar_with_ibtn_left_and_right" />
+
+    <RelativeLayout
+        android:id="@+id/question_footer"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#f3f3f3" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#afafaf"
+            android:visibility="visible" />
+
+        <RadioGroup
+            android:id="@+id/question_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/my_question_button"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/my_question"
+                android:textColor="@color/radiobutton" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:clickable="false"
+                android:focusable="false"
+                android:visibility="invisible" />
+
+            <RadioButton
+                android:id="@+id/more_question_button"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/more_quesion"
+                android:textColor="@color/radiobutton" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/make_question_button"
+        android:layout_width="80dp"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#00FFFFFF"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/question_add_buton" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/question_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/make_question_button"
+        android:layout_below="@id/question_title_bar" >
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homepage" >
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="180dip"
+        android:layout_height="180dip"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/homepage_logo" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv1"
+        android:layout_marginTop="10dip"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/tv2"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:background="@drawable/my_progress_animation_drawable"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/tv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv2"
+            android:text="@string/waiting"
+            android:textColor="@color/red1"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="100dip"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="12dip"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logo_foot" />
+
+</RelativeLayout>

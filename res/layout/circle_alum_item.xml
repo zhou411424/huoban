@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <TextView
+        android:id="@+id/tv_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_default"
+        android:layout_marginTop="@dimen/padding_default"
+        android:textSize="@dimen/text_size_super"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_day"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="@dimen/padding_default"
+        android:layout_toRightOf="@id/tv_day"
+        android:textSize="@dimen/text_size_small" />
+
+    <RelativeLayout
+        android:id="@+id/rl_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_day"
+        android:layout_marginLeft="@dimen/padding_default"
+        android:layout_marginRight="@dimen/padding_default"
+        android:layout_marginTop="10dip" >
+
+        <ImageView
+            android:id="@+id/iv_single"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:scaleType="fitXY" />
+
+        <com.example.huoban.widget.other.NoScrollGridView
+            android:id="@+id/gv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="3dip"
+            android:numColumns="3"
+            android:verticalSpacing="3dip" >
+        </com.example.huoban.widget.other.NoScrollGridView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_image"
+        android:layout_marginLeft="@dimen/padding_default"
+        android:layout_marginRight="@dimen/padding_default"
+        android:layout_marginTop="10dip"
+        android:textSize="@dimen/text_size_medium_b" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_content"
+        android:layout_marginLeft="@dimen/padding_default"
+        android:layout_marginTop="10dip"
+        android:textColor="@color/color_grey"
+        android:textSize="@dimen/text_size_small" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@id/tv_time"
+        android:layout_marginTop="@dimen/padding_default"
+        android:background="@color/line" />
+
+</RelativeLayout>

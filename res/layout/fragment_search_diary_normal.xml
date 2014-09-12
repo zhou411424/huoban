@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_style"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_bar_search_diary"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/style"
+            android:textColor="@color/text_dark_gray"
+            android:textSize="@dimen/text_size_medium" />
+
+        <RadioButton
+            android:id="@+id/rb_room"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_bar_search_diary"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/room"
+            android:textColor="@color/text_dark_gray"
+            android:textSize="@dimen/text_size_medium" />
+
+        <RadioButton
+            android:id="@+id/rb_budget"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_bar_search_diary"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/budget"
+            android:textColor="@color/text_dark_gray"
+            android:textSize="@dimen/text_size_medium" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/search_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

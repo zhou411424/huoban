@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.huoban.widget.other.ResizeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homepage"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/login_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"
+        android:contentDescription="@string/app_name"
+        android:padding="10dip"
+        android:src="@drawable/red_backo"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="12dip" >
+
+        <ImageView
+            android:id="@+id/foot_image"
+            android:layout_width="100dip"
+            android:layout_height="50dip"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logo_foot" />
+
+        <TextView
+            android:id="@+id/tv_forget_or_redo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="5dip"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/text_size_small"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rl"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_hinta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:text="@string/login_do_login_or_regist"
+            android:textColor="@color/color_light_black"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/tv_input_msg_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dip"
+            android:paddingLeft="10dip"
+            android:textColor="@color/foot_orange"
+            android:textSize="@dimen/text_size_small"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff" >
+
+            <ImageView
+                android:id="@+id/iv_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:src="@drawable/clean"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/iv_del"
+                android:background="@null"
+                android:padding="10dip"
+                android:singleLine="true"
+                android:textColor="@color/color_light_black"
+                android:textSize="@dimen/text_size_small" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:padding="10dip"
+                android:text="@string/login_next"
+                android:textColor="@color/foot_orange"
+                android:textSize="@dimen/text_size_medium" />
+
+            <TextView
+                android:id="@+id/tv_http_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tv_next"
+                android:gravity="left"
+                android:padding="10dip"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_size_small" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_head_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_input" >
+
+        <ImageView
+            android:id="@+id/head_image"
+            android:layout_width="180dip"
+            android:layout_height="180dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/homepage_logo" />
+    </RelativeLayout>
+
+</com.example.huoban.widget.other.ResizeLayout>

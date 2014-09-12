@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/my_bg_default" >
+
+    <RelativeLayout
+        android:id="@+id/layout_my_info"
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:layout_marginBottom="@dimen/my_padding_default"
+        android:layout_marginTop="@dimen/my_padding_default"
+        android:background="#00FFFFFF"
+        android:paddingLeft="@dimen/padding_default"
+        android:paddingRight="@dimen/padding_default" >
+
+        <com.example.huoban.widget.other.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/layout_my_user_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/b_ren"
+            app:border_color="#ffffff"
+            app:border_width="3dp" />
+
+        <TextView
+            android:id="@+id/layout_my_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/layout_my_user_icon"
+            android:background="#00FFFFFF"
+            android:shadowColor="#CCCCCC"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/my_text_size" />
+
+        <ImageView
+            android:id="@+id/layout_iv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/jiantou_right" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_my_info"
+        android:background="#AFFFFFFF"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="11.1dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/layout_my_gold"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/my_round_left"
+                android:gravity="center"
+                android:paddingRight="10dp" >
+
+                <TextView
+                    android:id="@+id/layout_my_tv_text_gold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="金币"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/layout_my_tv_allgoldnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#00FFFFFF"
+                    android:gravity="right"
+                    android:text="0"
+                    android:textColor="#333333"
+                    android:textSize="22sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_my_registration"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/my_round_right"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/layout_my_tv_text_registration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/registration"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="@string/gold"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/layout_my_add_gold"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/tv"
+                android:layout_toRightOf="@id/layout_my_tv_text_registration"
+                android:gravity="center"
+                android:text="+0"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/my_text_size" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

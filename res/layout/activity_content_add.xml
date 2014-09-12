@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/title_bar_with_word_right" />
+
+    <EditText
+        android:id="@+id/content_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head_layout"
+        android:background="@color/white"
+        android:gravity="top"
+        android:hint="@string/content_content"
+        android:maxLines="15"
+        android:minLines="10"
+        android:padding="10dip"
+        android:textColor="@color/black"
+        android:textSize="14sp" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_below="@+id/content_content"
+        android:layout_marginLeft="12dip"
+        android:layout_marginRight="12dip"
+        android:background="@drawable/pref_bg_body" />
+
+    <TextView
+        android:id="@+id/content_add_memo"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/line"
+        android:gravity="center_vertical"
+        android:padding="10dip"
+        android:paddingLeft="12dip"
+        android:paddingRight="12dip"
+        android:text="@string/content_add_memo1"
+        android:textColor="@color/foot_orange"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/content_memo"
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:layout_below="@+id/content_add_memo"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:gravity="left|top"
+        android:hint="@string/content_memo"
+        android:paddingLeft="12dip"
+        android:paddingRight="12dip"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:visibility="gone" >
+    </EditText>
+
+</RelativeLayout>

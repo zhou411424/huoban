@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/my_diary_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_default"
+        layout="@layout/title_bar_with_ibtn_left_and_right" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/height_default"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="vertical" >
+
+        <com.example.huoban.widget.other.MyDiaryItem
+            android:id="@+id/my_item_diary_remind"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/diary_divider" />
+        
+        <com.example.huoban.widget.other.MyDiaryItem
+            android:id="@+id/my_item_diary_attention"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/diary_divider" />
+        
+        <com.example.huoban.widget.other.MyDiaryItem
+            android:id="@+id/my_item_diary_comment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/diary_divider" />
+        
+    </LinearLayout>
+
+</RelativeLayout>

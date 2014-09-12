@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar_with_word_right" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_default"
+        android:paddingRight="@dimen/padding_default" >
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/red_bell"
+            android:drawablePadding="5dip"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding_default"
+            android:paddingTop="@dimen/padding_default"
+            android:textColor="@color/foot_orange"
+            android:textSize="@dimen/text_size_medium" />
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_time"
+            android:background="@null"
+            android:gravity="center|left"
+            android:hint="@string/please_input_content"
+            android:paddingBottom="@dimen/padding_default"
+            android:paddingTop="@dimen/padding_default"
+            android:singleLine="true"
+            android:textColor="@color/color_light_black"
+            android:textSize="@dimen/text_size_medium_b" >
+
+            <requestFocus />
+        </EditText>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/color_grey" />
+
+    <EditText
+        android:id="@+id/et_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center|left"
+        android:hint="@string/please_input_remark"
+        android:padding="@dimen/padding_default"
+        android:singleLine="true"
+        android:textColor="@color/color_light_black"
+        android:textSize="@dimen/text_size_medium_b" />
+
+</LinearLayout>

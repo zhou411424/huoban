@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#eee"
+    android:orientation="vertical" >
+     
+	<TextView android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textColor="@color/text_dark_gray"
+	    android:textSize="@dimen/text_size_big"
+	    android:drawableTop="@drawable/icon_smile"
+	    android:drawablePadding="20dp"
+	    android:gravity="center"
+	    android:text="喜欢这篇日记吗？"/>
+	
+	<Button
+	    android:id="@+id/btnShare" 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="35dp"
+	    android:layout_marginRight="35dp"
+	    android:layout_marginTop="45dp"
+	    android:background="@drawable/bg_browse_last_orange"
+	    android:textColor="@color/white"
+	    android:textSize="@dimen/text_size_big"
+	    android:text="分享给朋友"/>
+	<Button
+	     android:id="@+id/btnSchedule"  
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="35dp"
+	    android:layout_marginRight="35dp"
+	    android:layout_marginTop="20dp"
+	    android:background="@drawable/bg_browse_last_green"
+	    android:text="预定装修公司"
+	    android:textColor="@color/white"
+	    android:textSize="@dimen/text_size_big"/>
+</LinearLayout>

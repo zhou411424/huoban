@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/image_code_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        layout="@layout/title_bar_with_ibtn_left_and_right" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_code_title_bar"
+        android:orientation="vertical" >
+
+        <com.example.huoban.widget.other.CircleImageView
+            android:id="@+id/image_code_user_icon"
+            android:layout_width="70dip"
+            android:layout_height="70dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dip"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/image_code_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dip"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/image_code_image_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dip"
+            android:background="@drawable/code_bg"
+            android:gravity="center"
+            android:text="请扫描二维码，加我为好友"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</RelativeLayout>

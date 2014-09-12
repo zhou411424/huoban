@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <include
+        android:id="@+id/user_info_change_pw_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        layout="@layout/title_bar_with_word_right" />
+
+    <com.example.huoban.widget.other.ClearEditText
+        android:id="@+id/user_info_new_pw"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/user_info_change_pw_title_bar"
+        android:layout_marginLeft="@dimen/padding_default"
+        android:inputType="textPassword"
+        android:layout_marginRight="@dimen/padding_default"
+        android:background="@null"
+        android:hint="@string/change_pw_new_pw" />
+    <com.example.huoban.widget.other.ClearEditText
+        android:id="@+id/user_info_re_enter_pw"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/user_info_new_pw"
+        android:layout_marginLeft="@dimen/padding_default"
+        android:inputType="textPassword"
+        android:layout_marginRight="@dimen/padding_default"
+        android:background="@null"
+        android:hint="@string/change_pw_re_enter_pw" />
+    
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/user_info_new_pw"
+        android:layout_marginLeft="@dimen/padding_default"
+        android:layout_marginRight="@dimen/padding_default"
+        android:background="#dfdfdf" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/user_info_re_enter_pw"
+        android:layout_marginLeft="@dimen/padding_default"
+        android:layout_marginRight="@dimen/padding_default"
+        android:background="#dfdfdf" />
+    
+</RelativeLayout>

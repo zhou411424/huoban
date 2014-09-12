@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <include
+        android:id="@+id/my_diary_comment_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_default"
+        layout="@layout/title_bar_with_ibtn_left_and_right" />
+    
+    <com.example.huoban.widget.pull.PullToRefreshListView
+        android:id="@+id/lv_my_diary_comment_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/height_default"
+        android:scrollbars="none"
+        android:padding="10dp"
+        android:dividerHeight="10dp"
+        android:divider="@null"/>
+
+</RelativeLayout>

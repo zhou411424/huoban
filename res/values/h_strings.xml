@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="diary">装修日记</string>
+    <string name="search_diary_hint">输入需要搜索的内容</string>
+    <string name="style">风格</string>
+    <string name="room">房型</string>
+    <string name="budget">预算</string>
+    <string name="no_result">Sorry！找不到您搜索的日志！</string>
+    <string name="everybody_looking">大家都在看：</string>
+    <string name="has_result">&quot;%1$s&quot;为您找到%2$s个搜索结果：</string>
+
+    <string-array name="house_style">
+        <item>一房一厅一厨一卫</item>
+        <item>二房一厅一厨一卫</item>
+        <item>三房一厅一厨一卫</item>
+        <item>三房二厅一厨二卫</item>
+        <item>四房一厅一厨二卫</item>
+    </string-array>
+    <string-array name="house_budget">
+        <item>3~5万元</item>
+        <item>5~10万元</item>
+        <item>10~15万元</item>
+        <item>15~20万元</item>
+        <item>20万元以上</item>
+    </string-array>
+
+</resources>

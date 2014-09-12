@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/my_diary_remind_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_default"
+        layout="@layout/title_bar_with_ibtn_left_and_right" />
+    
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/my_diary_remind_title_bar">
+    	<LinearLayout 
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical">
+    		<com.example.huoban.widget.other.NoScrollListView
+        		android:id="@+id/lv_my_remind_diary_list"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:dividerHeight="0.5dp"
+        		android:divider="@color/diary_divider" />
+    		<View 
+    		    android:id="@+id/view_my_remind_diary"
+    		    android:layout_width="match_parent"
+    		    android:layout_height="0.5dp"
+    		    android:background="@color/diary_divider"
+    		    android:visibility="gone"
+    		    android:paddingLeft="5dp"
+    		    android:paddingRight="5dp"/>
+    		<com.example.huoban.widget.other.NoScrollListView
+        		android:id="@+id/lv_my_remind_focus_list"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:dividerHeight="0.5dp"
+        		android:divider="@color/diary_divider" />
+    		<View 
+    		    android:id="@+id/view_my_remind_focus"
+    		    android:layout_width="match_parent"
+    		    android:layout_height="0.5dp"
+    		    android:background="@color/diary_divider"
+    		    android:visibility="gone"
+    		    android:paddingLeft="5dp"
+    		    android:paddingRight="5dp"/>
+    		<com.example.huoban.widget.other.NoScrollListView
+        		android:id="@+id/lv_my_remind_comment_list"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:dividerHeight="0.5dp"
+        		android:divider="@color/diary_divider" />
+    		<View 
+    		    android:id="@+id/view_my_remind_comment"
+    		    android:layout_width="match_parent"
+    		    android:layout_height="0.5dp"
+    		    android:background="@color/diary_divider"
+    		    android:visibility="gone"
+    		    android:paddingLeft="5dp"
+    		    android:paddingRight="5dp"/>
+    	</LinearLayout>
+	</ScrollView>
+	
+</RelativeLayout>

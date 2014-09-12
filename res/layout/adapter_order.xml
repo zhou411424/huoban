@@ -1,0 +1,141 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="12dip" >
+
+        <LinearLayout
+            android:id="@+id/line_one"
+            style="@style/listOrder"
+            android:layout_alignParentTop="true" >
+
+            <TextView
+                style="@style/listOrder"
+                android:text="@string/order_shop"
+                android:textColor="@color/text1" />
+
+            <TextView
+                android:id="@+id/order_shop"
+                style="@style/listOrder"
+                android:textColor="@color/foot_black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/order_confirm"
+            style="@style/listOrder"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:paddingBottom="15dip"
+            android:paddingLeft="15dip"
+            android:textColor="@color/foot_orange"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/line_two"
+            style="@style/listOrder"
+            android:layout_below="@+id/line_one" >
+
+            <TextView
+                style="@style/listOrder"
+                android:text="@string/order_id"
+                android:textColor="@color/text1" />
+
+            <TextView
+                android:id="@+id/order_id"
+                style="@style/listOrder"
+                android:textColor="@color/foot_black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line_three"
+            style="@style/listOrder"
+            android:layout_below="@+id/line_two" >
+
+            <TextView
+                style="@style/listOrder"
+                android:text="@string/order_time"
+                android:textColor="@color/text1" />
+
+            <TextView
+                android:id="@+id/order_time"
+                style="@style/listOrder"
+                android:textColor="@color/foot_black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line_four"
+            style="@style/listOrder"
+            android:layout_below="@+id/line_three" >
+
+            <TextView
+                style="@style/listOrder"
+                android:text="@string/order_amount"
+                android:textColor="@color/text1" />
+
+            <TextView
+                android:id="@+id/order_amount"
+                style="@style/listOrder"
+                android:textColor="@color/color_orange" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/order_line1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_below="@+id/line_four"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/pref_bg_body" />
+
+        <com.example.huoban.widget.other.GalleryLayout
+            android:id="@+id/order_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/order_line1"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_toLeftOf="@+id/order_image" >
+        </com.example.huoban.widget.other.GalleryLayout>
+
+        <ImageView
+            android:id="@+id/order_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/order_layout"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/order_line1"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:contentDescription="@string/app_name"
+            android:padding="8dip"
+            android:src="@drawable/order_more" />
+
+        <TextView
+            android:id="@+id/order_line2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_below="@+id/order_layout"
+            android:background="@drawable/pref_bg_body" />
+
+        <LinearLayout
+            style="@style/listOrder"
+            android:layout_below="@+id/order_line2"
+            android:layout_marginTop="5dip" >
+
+            <TextView
+                style="@style/listOrder"
+                android:text="@string/order_status"
+                android:textColor="@color/text1" />
+
+            <TextView
+                android:id="@+id/order_status"
+                style="@style/listOrder"
+                android:textColor="@color/blue" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar_with_ibtn_left_and_right" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f5f5f5"
+        android:fadeScrollbars="false"
+        android:fadingEdge="none"
+        android:fadingEdgeLength="0dip" >
+
+        <RelativeLayout
+            android:id="@+id/all_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dip"
+                android:textColor="@color/color_light_black"
+                android:textSize="@dimen/text_size_big_b" />
+
+            <com.example.huoban.widget.other.NoScrollGridView
+                android:id="@+id/noScrollGridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_content"
+                android:layout_margin="15dip"
+                android:horizontalSpacing="5dip"
+                android:numColumns="4"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth" />
+
+            <RelativeLayout
+                android:id="@+id/rla"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/noScrollGridView"
+                android:layout_margin="15dip" >
+
+                <TextView
+                    android:id="@+id/tv_del"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dip"
+                    android:text="@string/del"
+                    android:textColor="@color/color_orange"
+                    android:textSize="@dimen/text_size_small"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_head"
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ren" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/iv_head"
+                    android:textColor="@color/color_orange"
+                    android:textSize="@dimen/text_size_small" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_grey"
+                    android:textSize="@dimen/text_size_small" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/rla"
+                android:background="@drawable/bg_qs_detail"
+                android:paddingBottom="50dip" >
+
+                <ImageView
+                    android:id="@+id/iv_no_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dip"
+                    android:contentDescription="@null"
+                    android:src="@drawable/icon_no_answer_for_qs"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rlb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip" >
+
+                    <ImageView
+                        android:id="@+id/iv_expert_head"
+                        android:layout_width="40dip"
+                        android:layout_height="40dip"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dip"
+                        android:contentDescription="@null"
+                        android:src="@drawable/icon_expert_female" />
+
+                    <TextView
+                        android:id="@+id/tv_expert_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_expert_head"
+                        android:padding="5dip"
+                        android:textColor="@color/color_orange"
+                        android:textSize="@dimen/text_size_medium_b" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/tv_expert_name"
+                        android:layout_toRightOf="@id/tv_expert_name"
+                        android:padding="5dip"
+                        android:text="@string/qijia_expert"
+                        android:textColor="#3882f0"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <TextView
+                        android:id="@+id/tv_expert_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_expert_name"
+                        android:layout_toRightOf="@id/iv_expert_head"
+                        android:textColor="@color/color_grey"
+                        android:textSize="@dimen/text_size_small" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_expert_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlb"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:paddingTop="10dip"
+                    android:textColor="@color/color_light_black"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <TextView
+                    android:id="@+id/tv_do_favor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tv_expert_answer"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/bg_favor_undo"
+                    android:gravity="center"
+                    android:paddingBottom="2dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="15dip"
+                    android:paddingTop="2dip"
+                    android:textColor="@color/color_grey"
+                    android:textSize="@dimen/text_size_medium_b" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <!-- bt -->
+    <color name="bt_bold_red">#B13A00</color>
+    <color name="bt_bold_yellow">#F8AD49</color>
+    <color name="bt_bg_pink">#FF82AB</color>
+    <color name="bg_color">#ffd1dce9</color>
+    <color name="blue_edge">#9DBDDF</color>
+    <color name="gray_edge">#242424</color>
+    <color name="blue">#007aff</color>
+    <color name="bc_color">#fff9f7</color>
+    <color name="text1">#7E7E7E</color>
+    <color name="text2">#cecece</color>
+    <color name="text3">#929292</color>
+    <!-- color -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="defaule">#f5f5f5</color>
+    <color name="line">#dfdfdf</color>
+    <color name="black">#FF000000</color>
+    <color name="grayo">#cecece</color>
+    <color name="light_gray">#4F4F4F</color>
+    <color name="red1">#ff3b2f</color>
+    <color name="gray">#CCCCCC</color>
+    <color name="gray1">#c8c7cc</color>
+    <color name="grey2">#EDEDED</color>
+    <color name="grey">#ff333333</color>
+    <color name="orange">#FF9900</color>
+    <color name="foot_orange">#FF4800</color>
+    <color name="foot_black">#4a4a4a</color>
+    <color name="foot_black_2">#333333</color>
+    <color name="plan_date_color">#bbbbbb</color>
+    <color name="foot_blue">#007aff</color>
+    <!-- scan color -->
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="transparent">#9000</color>
+    <!-- scan color -->
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="gray_release_start">#FDFCF7</color>
+    <color name="gray_release_end">#FEFFFC</color>
+    <color name="gray_release_center">#FDFCF7</color>
+    <color name="gray_pressed_start">#6D6D6D</color>
+    <color name="gray_pressed_center">#6D6D6D</color>
+    <color name="gray_pressed_end">#6D6D6D</color>
+
+    <!-- Commons -->
+    <color name="text_title">#444444</color>
+    <color name="text_description">#7e7e7e</color>
+
+    <!-- <color name="line">#ffbcbcbc</color> -->
+
+    <drawable name="dr_line">#b2b2b2</drawable>
+    <color name="background_new_tag">#ff0000</color>
+    <color name="comment_press">#cecece</color>
+    <color name="supervisor">#333333</color>
+    <color name="color_orange">#FF4800</color>
+    <!-- question -->
+    <color name="RadioChecked">#ff5500</color>
+    <color name="RadioUnchecked">#333333</color>
+    <color name="radio_checked">#ff5500</color>
+    <color name="radio_unchecked">#333333</color>
+    <color name="question_filter_text">#333333</color>
+    <color name="question_filter_state_focused">#afafaf</color>
+    <color name="question_filter_state_unfocused">#ffffff</color>
+    <color name="question_filter_state_clicked">#878787</color>
+    <color name="color_grey">#aaaaaa</color>
+    <color name="color_light_black">#333333</color>
+    <color name="holo_blue">#FF33E5B5</color>
+    <!-- 我的 -->
+    <color name="text_yello">#FF6633</color>
+    <color name="text_dark_gray">#333333</color>
+    <color name="text_light_gray">#EFEFEF</color>
+
+    <drawable name="contacts_delete_button_pressed">#cfcfcf</drawable>
+    <drawable name="contacts_delete_button">#ff0000</drawable>
+    <drawable name="image_load_defaule">#dddbdb</drawable>
+    <!-- 我的 -->
+
+
+    <!-- assistant -->
+    <color name="wenda">#fc999c</color>
+    <color name="qianbao">#cb9feb</color>
+    <color name="kefu">#8edfff</color>
+    <color name="zixun">#8fb8ff</color>
+    <color name="liucheng">#a9d500</color>
+    <color name="skip">#92c526</color>
+    
+    <!-- 日记 -->
+ 	<color name="diary_title">#333333</color>
+ 	<color name="diary_remark">#929292</color>
+ 	<color name="diary_date">#646464</color>
+ 	<color name="diary_divider">#c8c7cc</color>
+ 	<color name="diary_navigation">#b2b2b2</color>
+ 	<color name="diary_background">#f5f5f5</color>
+ 	<color name="diary_background1">#fff97f</color>
+ 	<color name="diary_hint">#aaaaaa</color>
+ 	<color name="diary_main_color">#ff4800</color>
+ 	<color name="diary_secondary_color">#ff662c</color>
+ 	<color name="diary_cyan_color">#92c526</color>
+ 	<color name="diary_bule_color">#3882f0</color>
+ 	<color name="diary_purple_color">#8577c0</color>
+ 	<drawable name="window">#7f000000</drawable>
+
+</resources>

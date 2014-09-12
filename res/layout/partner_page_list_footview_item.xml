@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/rl_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="@dimen/image_heght_default"
+                android:layout_height="@dimen/image_heght_default"
+                android:layout_marginTop="@dimen/padding_default"
+                android:contentDescription="@null"
+                android:src="@drawable/icon_record_account" />
+
+            <ImageView
+                android:id="@+id/iv_new_msg_hint"
+                android:layout_width="10dip"
+                android:layout_height="10dip"
+                android:layout_marginTop="10dip"
+                android:contentDescription="@null"
+                android:src="@drawable/cycle"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/padding_default"
+            android:textColor="@color/color_grey"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/tv_bill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_time"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/text_size_small"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="@dimen/padding_default"
+            android:layout_toLeftOf="@id/tv_time"
+            android:layout_toRightOf="@id/rl_logo"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_light_black"
+                android:textSize="@dimen/text_size_medium" />
+
+            <TextView
+                android:id="@+id/tv_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/color_grey"
+                android:textSize="@dimen/text_size_small"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/bottom_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_below="@id/rl_logo"
+            android:layout_marginTop="@dimen/padding_default"
+            android:background="@color/line" />
+    </RelativeLayout>
+
+</RelativeLayout>

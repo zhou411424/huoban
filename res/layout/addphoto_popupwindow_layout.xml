@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom|center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#C0C0C0"
+        android:padding="20dp" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dip"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_medium"
+            android:visibility="gone" />
+
+        <com.example.huoban.widget.other.NoScrollListView
+            android:id="@+id/choiseItemList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:divider="#00000000"
+            android:dividerHeight="10dip"
+            android:gravity="center_vertical"
+            android:listSelector="@android:color/transparent"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dip"
+            android:background="@color/foot_black"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:padding="10dip"
+            android:text="@string/cancel"
+            android:textSize="@dimen/text_size_big_b" />
+    </LinearLayout>
+
+</LinearLayout>

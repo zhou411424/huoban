@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".MainActivity" >
+
+    <com.example.huoban.activity.my.userinfo.image.ClipImageView
+        android:id="@+id/clip_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.huoban.activity.my.userinfo.image.ClipView
+        android:id="@+id/clip_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/clip_button_cancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="50dp"
+        android:background="#00FFFFFF"
+        android:text="取消"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/clip_button_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="50dp"
+        android:background="#00FFFFFF"
+        android:text="确定"
+        android:textColor="#FFFFFF" />
+
+    <include
+        android:id="@+id/clip_image_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        layout="@layout/title_bar_with_word_right" />
+
+</RelativeLayout>

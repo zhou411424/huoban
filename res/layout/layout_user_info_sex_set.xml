@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <include
+        android:id="@+id/sex_set_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        layout="@layout/title_bar_with_word_right" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sex_set_title_bar"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_default"
+        android:paddingRight="@dimen/padding_default" >
+
+        <include
+            android:id="@+id/sex_set_secret"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            layout="@layout/layout_user_info_sex_set_item" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#dfdfdf" />
+
+        <include
+            android:id="@+id/sex_set_man"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            layout="@layout/layout_user_info_sex_set_item" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#dfdfdf" />
+
+        <include
+            android:id="@+id/sex_set_woman"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            layout="@layout/layout_user_info_sex_set_item" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#dfdfdf" />
+    </LinearLayout>
+
+</RelativeLayout>

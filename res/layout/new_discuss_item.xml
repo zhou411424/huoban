@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="12dp"
+    android:layout_marginRight="12dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="12dip" >
+
+    <RelativeLayout
+        android:id="@+id/discuss_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/discuss_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/discuss_time"
+            android:paddingTop="12dip"
+            android:textColor="@color/foot_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/discuss_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:paddingTop="12dip"
+            android:textColor="#bbbbbb"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/LLdiscuss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/discuss_time"
+        android:layout_marginTop="12dp" >
+
+        <TextView
+            android:id="@+id/discuss_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/discuss_content"
+            android:layout_alignBottom="@+id/discuss_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/discuss_user_image"
+            android:textColor="@color/foot_orange"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/discuss_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/discuss_user_name"
+            android:layout_alignBottom="@+id/discuss_user_name"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/discuss_user_name"
+            android:text="@string/del"
+            android:textColor="@color/foot_orange"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/discuss_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/ic_discuss_content"
+            android:gravity="center_vertical"
+            android:padding="10dip" />
+
+        <ImageView
+            android:id="@+id/discuss_user_image"
+            android:layout_width="18dip"
+            android:layout_height="18dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/ren" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/View"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@+id/LLdiscuss"
+        android:layout_marginTop="12dp"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/discuss_line"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/View"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_discuss_line"
+        android:visibility="gone" />
+
+    <com.example.huoban.widget.other.ListViewLayout
+        android:id="@+id/list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" >
+    </com.example.huoban.widget.other.ListViewLayout>
+
+</LinearLayout>

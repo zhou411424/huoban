@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <RelativeLayout
+        android:id="@+id/question_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/question_header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="44dip"
+            android:background="#f5f5f5"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/question_title_back"
+                style="@style/buttonStyle1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#f5f5f5"
+                android:drawableLeft="@drawable/red_backo"
+                android:gravity="center"
+                android:padding="7dp"
+                android:textColor="#fff" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="18sp" >
+            </TextView>
+
+            <Button
+                android:id="@+id/title_button"
+                style="@style/buttonStyle1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#f5f5f5"
+                android:drawableTop="@drawable/make_question_menu"
+                android:padding="12dip" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/make_queston_title_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/my_question"
+            android:textColor="#000000"
+            android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/make_question_headline"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:layout_below="@id/question_header_layout"
+            android:layout_centerHorizontal="true"
+            android:background="#b2b2b2" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/question_footer"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#f3f3f3" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#afafaf"
+            android:visibility="visible" />
+
+        <RadioGroup
+            android:id="@+id/question_menu"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/my_question_button"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/my_question"
+                android:textColor="@color/radiobutton" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:clickable="false"
+                android:focusable="false"
+                android:visibility="invisible" />
+
+            <RadioButton
+                android:id="@+id/more_question_button"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/more_quesion"
+                android:textColor="@color/radiobutton" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/make_question_button"
+        android:layout_width="80dp"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#00FFFFFF"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/make_question_add" />
+
+    <FrameLayout
+        android:id="@+id/question_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/make_question_button"
+        android:layout_below="@id/question_header" >
+    </FrameLayout>
+
+<!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/make_question_button"
+        android:layout_below="@id/question_header" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/question_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </android.support.v4.view.ViewPager>
+    </RelativeLayout>
+ -->
+</RelativeLayout>

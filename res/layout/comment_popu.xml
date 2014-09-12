@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="30dp"
+    android:background="@drawable/bg_comment_praise"
+    android:gravity="center_vertical" >
+
+    <TextView
+        android:id="@+id/popu_praise"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/bg_praise"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/favour"
+        android:textColor="@color/color_light_black"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="1dip"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/praise_line" />
+
+    <TextView
+        android:id="@+id/popu_comment"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/bg_comment_"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="@string/content_add"
+        android:textColor="@color/color_light_black"
+        android:textSize="12sp" />
+
+</LinearLayout>

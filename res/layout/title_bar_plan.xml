@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_default"
+    android:background="@color/defaule" >
+
+    <ImageButton
+        android:id="@+id/ibtn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_default"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:contentDescription="@null"
+        android:paddingLeft="@dimen/padding_default"
+        android:paddingRight="@dimen/padding_default"
+        android:src="@drawable/red_backo" />
+
+    <ImageButton
+        android:id="@+id/ibtn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_default"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:contentDescription="@null"
+        android:paddingLeft="@dimen/padding_default"
+        android:paddingRight="@dimen/padding_default"
+        android:src="@drawable/red_addo" />
+
+    <ImageButton
+        android:id="@+id/ibtn_center"
+        android:layout_width="@dimen/height_default"
+        android:layout_height="@dimen/height_default"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/ibtn_right"
+        android:background="@null"
+        android:contentDescription="@null"
+        android:src="@drawable/red_searcho" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/ibtn_right"
+        android:layout_toRightOf="@id/ibtn_left"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/plan"
+        android:textColor="@color/color_light_black"
+        android:textSize="@dimen/text_size_big" />
+
+</RelativeLayout>

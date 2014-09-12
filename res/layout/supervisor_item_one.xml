@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_time1"
+        android:paddingBottom="5dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="5dp"
+        android:text="2014年6月5日 10:50"
+        android:textColor="#f5f5f5"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTime"
+        android:background="@drawable/bg_supervisor"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/supervisor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/supervisor_image"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:text="@string/superisor_infor"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/supervisor_image"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_alignLeft="@+id/SupervisorName"
+            android:layout_below="@+id/supervisor"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_supervisor_image"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/SupervisorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/supervisor_image"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="18dp"
+            android:text="姓名"
+            android:textColor="#aaaaaa"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvSupervisorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/supervisor_image"
+            android:layout_marginBottom="18dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="18dp"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/viewName"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/SupervisorName"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#c8c7cc" />
+
+        <TextView
+            android:id="@+id/SupervisorSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/viewName"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="性别"
+            android:textColor="#aaaaaa"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvSupervisorSex"
+            android:layout_width="16dp"
+            android:layout_height="18dp"
+            android:layout_alignBaseline="@+id/SupervisorSex"
+            android:layout_alignBottom="@+id/SupervisorSex"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_sex_boy"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/viewSex"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/SupervisorSex"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#c8c7cc" />
+
+        <TextView
+            android:id="@+id/SupervisorID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/viewSex"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="身份证号(后四位)"
+            android:textColor="#aaaaaa"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvSupervisorID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/SupervisorID"
+            android:layout_alignBottom="@+id/SupervisorID"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/viewID"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/SupervisorID"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#c8c7cc" />
+
+        <TextView
+            android:id="@+id/phoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/viewID"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="手机号码"
+            android:textColor="#aaaaaa"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/phoneNumber"
+            android:layout_alignBottom="@+id/phoneNumber"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/viewNumber"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/phoneNumber"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#c8c7cc" />
+
+        <TextView
+            android:id="@+id/supervisorNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/viewNumber"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="监理证编号"
+            android:textColor="#aaaaaa"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvSupervisorNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/supervisorNumber"
+            android:layout_alignBottom="@+id/supervisorNumber"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/viewSupervisorNumber"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/supervisorNumber"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#c8c7cc" />
+
+        <RelativeLayout
+            android:id="@+id/rl_connect"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/supervisorNumber"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_btn_service"
+            android:gravity="center_horizontal"
+            android:paddingBottom="8.5dip"
+            android:paddingTop="8.5dip" >
+
+            <ImageView
+                android:id="@+id/lv_remember_a"
+                android:layout_width="18dp"
+                android:layout_height="25dip"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_phone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dip"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/lv_remember_a"
+                android:gravity="center_vertical"
+                android:text="联系我"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_connect"
+            android:layout_marginTop="10dp"
+            android:text="好好"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</RelativeLayout>

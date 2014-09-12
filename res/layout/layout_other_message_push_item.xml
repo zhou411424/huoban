@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef" >
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="#FFFFFF"
+        android:paddingBottom="5dp"
+        android:paddingLeft="@dimen/padding_default"
+        android:paddingRight="@dimen/padding_default"
+        android:paddingTop="5dp" >
+
+        <TextView
+            android:id="@+id/message_push_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+
+        <CheckBox
+            android:id="@+id/message_push_item_ischecked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/swith_button"
+            android:checked="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/message_push_item_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/rl"
+        android:background="#efefef"
+        android:paddingBottom="5dp"
+        android:paddingLeft="@dimen/padding_default"
+        android:paddingRight="@dimen/padding_default" />
+
+</RelativeLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/company_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_default"
+        layout="@layout/title_bar_with_ibtn_left_and_right" />
+
+    <ScrollView
+        android:id="@+id/sv_company"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/company_title_bar" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp" >
+
+            <com.example.huoban.widget.other.RoundImageView
+                android:id="@+id/iv_company_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/icon_company_default" />
+
+            <TextView
+                android:id="@+id/tv_company_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/iv_company_img"
+                android:textColor="@color/text_dark_gray"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_company_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_company_name"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/iv_company_img"
+                android:text="@string/company_grade"
+                android:textColor="#A7A7A7"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/layout_company_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_company_name"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/tv_company_grade"
+                android:textColor="#FF6924"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_company_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_company_grade"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/iv_company_img"
+                android:text="@string/company_count"
+                android:textColor="#A7A7A7"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_company_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_company_grade"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/tv_company_count"
+                android:textColor="#FF6924"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_company_appoint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_company_img"
+                android:background="@drawable/btn_appoint"
+                android:text="@string/company_appoint"
+                android:textColor="@color/white" />
+
+            <RelativeLayout
+                android:id="@+id/layout_company_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_company_appoint"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_diary"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_company_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/company_service"
+                    android:textColor="#FF6924"
+                    android:textSize="18sp" />
+
+                <com.example.huoban.widget.other.ListViewEx
+                    android:id="@+id/lv_company_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_company_service"
+                    android:divider="@null"
+                    android:listSelector="@android:color/transparent" >
+                </com.example.huoban.widget.other.ListViewEx>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_company_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/layout_company_service"
+                android:layout_marginTop="15dp"
+                android:text="@string/company_recommend"
+                android:textColor="#FF6924"
+                android:textSize="18sp" />
+
+            <com.example.huoban.widget.other.ListViewEx
+                android:id="@+id/lv_company_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_company_recommend"
+                android:divider="@null"
+                android:dividerHeight="10dp"
+                android:scrollbars="none" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

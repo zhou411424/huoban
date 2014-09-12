@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="@drawable/bg_diary_comment_send" >
+    
+	<EditText
+	    android:id="@+id/et_diary_comment_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:layout_weight="5"
+        android:hint=""
+        android:background="@drawable/bg_diary_comment_edit"/>
+	
+    <Button
+        android:id="@+id/btn_diary_comment_bottom"
+        android:layout_width="@dimen/btn_comment_send_width"
+        android:layout_height="32dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/btn_comment_send"
+        android:text="@string/diary_comment_send" />
+    
+</LinearLayout>

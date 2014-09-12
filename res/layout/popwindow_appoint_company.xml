@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:gravity="center" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_appoint_company_frame"
+            android:id="@+id/layout_menu"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="装修公司："
+                android:textColor="@color/text_dark_gray"
+                android:textSize="@dimen/text_size_medium_b" />
+
+            <TextView
+                android:id="@+id/tvCompany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv"
+                android:textColor="@color/text_dark_gray"
+                android:textSize="@dimen/text_size_medium_b" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_appoint_company_edittext"
+                android:hint="姓名"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/text_dark_gray"
+                android:textColorHint="#999999"
+                android:textSize="@dimen/text_size_medium_b" />
+
+            <EditText
+                android:id="@+id/et_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_name"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape_appoint_company_edittext"
+                android:hint="手机号码"
+                android:inputType="phone"
+                android:paddingBottom="10dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/text_dark_gray"
+                android:textColorHint="#999999"
+                android:textSize="@dimen/text_size_medium_b" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_mobile"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:text="您的户型："
+                android:textColor="@color/text_dark_gray"
+                android:textSize="@dimen/text_size_medium_b" />
+
+            <LinearLayout
+                android:id="@+id/ll_house_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv1"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp" >
+
+                <RadioButton
+                    android:id="@+id/rb_house_style_one"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@drawable/selector_appoint_company_radio"
+                    android:paddingLeft="5dp"
+                    android:text="一房"
+                    android:textColor="#666"
+                    android:textSize="@dimen/text_size_medium_b" />
+
+                <RadioButton
+                    android:id="@+id/rb_house_style_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@drawable/selector_appoint_company_radio"
+                    android:paddingLeft="5dp"
+                    android:text="二房"
+                    android:textColor="#666"
+                    android:textSize="@dimen/text_size_medium_b" />
+
+                <RadioButton
+                    android:id="@+id/rb_house_style_three"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@drawable/selector_appoint_company_radio"
+                    android:paddingLeft="5dp"
+                    android:text="三房"
+                    android:textColor="#666"
+                    android:textSize="@dimen/text_size_medium_b" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_house_style_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_house_style"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp" >
+
+                <RadioButton
+                    android:id="@+id/rb_house_style_four"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@drawable/selector_appoint_company_radio"
+                    android:paddingLeft="5dp"
+                    android:text="四房"
+                    android:textColor="#666"
+                    android:textSize="@dimen/text_size_medium_b" />
+
+                <RadioButton
+                    android:id="@+id/rb_house_style_five"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@drawable/selector_appoint_company_radio"
+                    android:paddingLeft="5dp"
+                    android:text="复式"
+                    android:textColor="#666"
+                    android:textSize="@dimen/text_size_medium_b" />
+
+                <RadioButton
+                    android:id="@+id/rb_house_style_six"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@drawable/selector_appoint_company_radio"
+                    android:paddingLeft="5dp"
+                    android:text="别墅"
+                    android:textColor="#666"
+                    android:textSize="@dimen/text_size_medium_b" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_house_style_"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="15dp"
+                android:text="您的预算："
+                android:textColor="@color/text_dark_gray"
+                android:textSize="@dimen/text_size_medium_b" />
+
+            <LinearLayout
+                android:id="@+id/ll_budget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv2"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp" >
+
+                <RadioButton
+                    android:id="@+id/rb_budget_one"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@drawable/selector_appoint_company_radio"
+                    android:paddingLeft="5dp"
+                    android:text="5万以下"
+                    android:textColor="#666"
+                    android:textSize="@dimen/text_size_medium_b" />
+
+                <RadioButton
+                    android:id="@+id/rb_budget_two"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@drawable/selector_appoint_company_radio"
+                    android:paddingLeft="5dp"
+                    android:text="5-10万"
+                    android:textColor="#666"
+                    android:textSize="@dimen/text_size_medium_b" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_budget_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_budget"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp" >
+
+                <RadioButton
+                    android:id="@+id/rb_budget_three"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@drawable/selector_appoint_company_radio"
+                    android:paddingLeft="5dp"
+                    android:text="10-15万"
+                    android:textColor="#666"
+                    android:textSize="@dimen/text_size_medium_b" />
+
+                <RadioButton
+                    android:id="@+id/rb_budget_four"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:button="@drawable/selector_appoint_company_radio"
+                    android:paddingLeft="5dp"
+                    android:text="15万以上"
+                    android:textColor="#666"
+                    android:textSize="@dimen/text_size_medium_b" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/iv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_budget_"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="预约成功后我们会尽快联系您！"
+                android:textColor="#666"
+                android:textSize="@dimen/text_size_big" />
+
+            <TextView
+                android:id="@+id/btn_appoint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv3"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_appoint_company"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_big" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

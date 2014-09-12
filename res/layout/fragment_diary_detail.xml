@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee" >
+
+    <com.example.huoban.widget.pull.PullToRefreshListView
+        android:id="@+id/pullToRefreshListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:persistentDrawingCache="scrolling"
+        android:alwaysDrawnWithCache="true"
+        android:background="@null"
+        android:divider="@android:color/transparent"
+        android:listSelector="@android:color/transparent" >
+    </com.example.huoban.widget.pull.PullToRefreshListView>
+
+    <com.example.huoban.widget.other.LightView
+        android:id="@+id/lightView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+     
+
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <include
+        android:id="@+id/suggestion_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        layout="@layout/title_bar_with_ibtn_left_and_right" />
+
+    <include
+        android:id="@+id/suggestion_send_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/layout_chat_message_send"
+        android:paddingLeft="@dimen/padding_default"
+        android:paddingRight="@dimen/padding_default" />
+
+    <ListView
+        android:id="@+id/suggestion_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/suggestion_send_bar"
+        android:layout_below="@id/suggestion_title_bar"
+        android:divider="@null"
+        android:paddingLeft="@dimen/padding_default"
+        android:paddingRight="@dimen/padding_default"
+        android:scrollbars="none" >
+    </ListView>
+
+</RelativeLayout>

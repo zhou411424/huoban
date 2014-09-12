@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dip" >
+
+    <ImageView
+        android:id="@+id/ivFriendPhoto"
+        android:layout_width="48dip"
+        android:layout_height="48dip"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/circle_default_avatar" />
+
+    <TextView
+        android:id="@+id/tvFriendName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dip"
+        android:layout_toRightOf="@id/ivFriendPhoto"
+        android:singleLine="true"
+        android:text="一个难以惹过"
+        android:textColor="#FF4800"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvFriendName"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="12dip"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@id/ivFriendPhoto"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:text="你的影子在每一个角落好像是在提醒着我"
+        android:textColor="#4a4a4a"
+        android:textSize="16sp" />
+
+    <com.example.huoban.widget.NoScrollGridView
+        android:id="@+id/gvPhotolistView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvContent"
+        android:layout_marginLeft="12dip"
+        android:layout_toRightOf="@id/ivFriendPhoto"
+        android:horizontalSpacing="6dp"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="6dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gvPhotolistView"
+        android:layout_marginLeft="12dip"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@id/ivFriendPhoto"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tvPublishTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:text="2天前"
+            android:textColor="#7e7e7e"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvDle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="删除"
+            android:textColor="#FF4800"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_comment_or_favor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/bg_comment" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvFavor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll"
+        android:layout_marginLeft="12dip"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@id/ivFriendPhoto"
+        android:drawableLeft="@drawable/likeicon"
+        android:drawablePadding="3dip"
+        android:visibility="gone"
+        android:textColor="@color/color_orange"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/linePraise"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_toRightOf="@id/ivFriendPhoto"
+        android:layout_marginLeft="12dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tvFavor"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dip"
+        android:visibility="gone"
+        android:background="#c7c7c7" />
+
+    <com.example.huoban.listview.NoScrollListView
+        android:id="@+id/comment_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dip"
+        android:layout_below="@id/linePraise"
+        android:layout_marginTop="6dp"
+        android:divider="@null"
+        android:layout_toRightOf="@id/ivFriendPhoto" />
+
+</RelativeLayout>

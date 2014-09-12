@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">装修伙伴</string>
+    <string name="action_settings">装修伙伴</string>
+    <string name="account_change">您的账号已在其他设备登录,请重新登录!</string>
+    <!-- all -->
+    <string name="time_choise">请设置时间</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="waiting">请稍候&#8230;</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="share">分享</string>
+    <string name="zh_cancel">取消</string>
+    <string name="no_net">检测到网络不可用</string>
+    <string name="time_out">连接服务器超时，请检查网络配置</string>
+    <string name="data_fail">网络获取数据失败！！！</string>
+    <string name="data_loading">数据加载中&#8230;</string>
+    <string name="pull_to_refresh_pull_labeld">下拉刷新&#8230;</string>
+    <string name="pull_to_load_more_up">上拉加载&#8230;</string>
+    <string name="pull_to_load_more_down">松开加载&#8230;</string>
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">松开后刷新</string>
+    <string name="pull_to_refresh_refreshing_label">正在努力读取中\u2026</string>
+    <string name="pull_to_refresh_footer_release_label">松开后加载</string>
+    <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
+    <string name="pull_to_refresh_footer_refreshing_label">加载中\u2026</string>
+    <string name="pull_to_refresh_refreshing_labela">正在努力读取中&#8230;</string>
+    <!-- all -->
+    <!-- 登录 -->
+    <string name="login_do_login_or_regist">请登录或者创建新账号</string>
+    <string name="login_next">下一步</string>
+    <string name="login_login">登录</string>
+    <string name="login_register">注册</string>
+    <string name="login_on_loging">正在登录&#8230;</string>
+    <string name="login_on_register">正在注册&#8230;</string>
+    <string name="login_get_check_code">获取登录码</string>
+    <string name="login_input_username_or_mobile">请输入您的手机号或者用户名</string>
+    <string name="login_on_check_your_account">正在验证您的账号&#8230;</string>
+    <string name="login_input_pass">请输入密码</string>
+    <string name="login_your_use_this_account">您正在登录账户</string>
+    <string name="login_your_creat_account">您创建了一个新账户</string>
+    <string name="login_input_userName">请输入用户名</string>
+    <string name="login_input_mobile">请输入手机号</string>
+    <string name="login_input_mobile_correctly">请正确输入手机号!</string>
+    <string name="login_input_content">请输入内容</string>
+    <string name="login_usrename_mobile_error">该用户名或手机已绑定</string>
+    <string name="login_code_on_sending">OK,收到您的请求，新密码在来的途中，请注意查收&#8230;</string>
+    <string name="login_code_on_request">正在获取登录码&#8230;</string>
+    <string name="login_input_your_code">请输入登录码</string>
+    <string name="login_input_your_code_correct">请正确输入登录码</string>
+    <string name="error_password">额......密码有点小问题，请检查下您的密码</string>
+    <string name="username_error_all_num">用户名不能全为数字!</string>
+    <string name="login_forget_pass">忘记密码?</string>
+    <string name="login_resend">重新发送?</string>
+    <string name="time_later_do">秒后重新发送</string>
+    <!-- 登录 -->
+
+
+    <!-- 装修助手 -->
+    <string name="wenda">专家问答</string>
+    <string name="kefu">在线客服</string>
+    <string name="zixun">电话咨询</string>
+    <string name="discuss">讨论区</string>
+    <string name="content_input">请填写评论内容</string>
+    <string name="content_success">发表成功</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载......</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">上拉查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="assistant_title">装修助手</string>
+    <string name="online_service_title">在线咨询</string>
+    <string name="vip_service">装修助手VIP服务</string>
+    <string name="vip_service_content">装修助手是齐家独有的特色免费服务，当您在齐家装修时，碰到对装修服务的了解、活动信息的咨询、促销信息的了解、施工中的温馨提示、送货补货方面的困扰、审核装修预算的服务、售后保障的投诉等等，一系列有关齐家与您之间的交流，您都可以找到一对一为您服务的装修助手，来帮助您搞定这些问题。</string>
+
+    <string-array name="contact_us">
+        <item>申请VIP服务</item>
+        <item>在线客服咨询</item>
+        <item>电话咨询</item>
+    </string-array>
+
+    <string name="apply">立即申请</string>
+    <string name="no_remind">下次不在提示 </string>
+    <string name="skip">跳过&#032;&#062;</string>
+    <string name="confirm_message">申请提交之后装修助手客服会第二个工作日联系您，请确保您的手机畅通，感谢您使用齐家服务 </string>
+    <string name="confirm">确认</string>
+    <string name="call">呼叫助手</string>
+    <string name="toast_apply_success">申请提交成功！装修助手客服会第二个工作日联系您，请确保您的手机畅通，感谢您使用齐家服务!</string>
+    <string name="toast_apply_fail">申请vip服务失败，请稍后再试！</string>
+    <string name="json_parser_fail">解析错误</string>
+    <string name="wallet_title">齐家钱包</string>
+    <!-- Transaction -->
+    <string name="tran_text">账户余额</string>
+    <string name="tran_log">交易记录</string>
+    <string name="tran_recharge">充值记录</string>
+    <string name="tran_withdrawal">提现记录</string>
+    <string name="transaction_error">当前没有交易记录</string>
+    <!-- Trade -->
+    <string name="p_acquiring">订金</string>
+    <string name="trade_100">待支付</string>
+    <string name="trade_111">进行中</string>
+    <string name="trade_121">进行中</string>
+    <string name="trade_100_2">等待对方付款</string>
+    <string name="trade_201">转账成功</string>
+    <string name="trade_301">交易成功</string>
+    <string name="trade_301_2">转账成功</string>
+    <string name="trade_401">交易结束</string>
+    <string name="trade_401_2">转账结束</string>
+    <string name="trade_999">交易关闭</string>
+    <string name="deposit">充值</string>
+    <string name="money">提现</string>
+    <string name="query_balance">查询余额</string>
+    <string name="query_trade">交易明细</string>
+    <string name="query_deposit">充值明细</string>
+    <string name="query_fos">提现明细</string>
+    <string name="order_summary">订单明细</string>
+    <string name="buy_log">交易记录</string>
+    <!-- Order -->
+    <string name="no_order">您还没有订单记录！</string>
+    <string name="order_id">订单编号:</string>
+    <string name="order_time">下订时间:</string>
+    <string name="order_amount">订单金额:</string>
+    <string name="order_shop">商家名称:</string>
+    <string name="order_status">订单状态:</string>
+    <string name="receipet">确认收货</string>
+    <string name="user_address">送货地址</string>
+    <string name="cancel_order_1">退订</string>
+    <string name="cancel_order_2">取消订单</string>
+    <string name="cancel_order_success">退订成功</string>
+    <string name="cancel_order_2_success">取消成功</string>
+    <string name="receipt_success">收货成功</string>
+    <!-- ProcesstatusId -->
+    <string name="processtatid20">待支付预约金</string>
+    <string name="processtatid21">待填写支付金额</string>
+    <string name="processtatid41">待支付</string>
+    <string name="processtatid51">待发货</string>
+    <string name="processtatid71">待收货确认</string>
+    <string name="processtatid81">待验收</string>
+    <string name="processtatid91">订单完成</string>
+    <string name="processtatid100">订单关闭</string>
+    <!-- Payment -->
+    <string name="pay_r">已退款</string>
+    <string name="pay_s">成功</string>
+    <string name="pay_f">失败</string>
+    <string name="pay_o">操作中</string>
+    <!-- Money -->
+    <string name="status_submitted">出款申请已提交</string>
+    <string name="status_success">出款成功</string>
+    <string name="status_failed">出款失败</string>
+    <!-- Summary-Activity -->
+    <string name="no_input">未填</string>
+    <string name="summary_username">联系人:</string>
+    <string name="summary_address">联系地址:</string>
+    <string name="summary_comment">买家留言:</string>
+    <string name="summary_dingjin">预约金:</string>
+    <string name="summary_input">尾款:</string>
+    <string name="summary_fee">运费:</string>
+    <string name="summary_total">折价前总价:</string>
+    <string name="summary_discount">折扣:</string>
+    <string name="summary_discount_total">总价:</string>
+    <string name="fitment_process_title">装修流程</string>
+    <string name="construction_procedure">施工工序</string>
+    <string name="material">下阶段材料</string>
+    <string name="pageLoad">页面加载中.......</string>
+    <string name="tip_forget_password">忘记密码，发送验证码</string>
+    <string name="tip_error_password">密码弄错了，我重新输入</string>
+    <string name="information">提示</string>
+    <string name="camera">拍照</string>
+    <string name="get_photo">从相册中获取</string>
+
+    <!-- 齐家监理 -->
+    <string name="supervisor">齐家监理</string>
+    <string name="superisor_infor">监理信息</string>
+    <string name="no_info">暂无</string>
+    <string name="look_infor">查看全文</string>
+    <string name="service">拨打400&#8211;660&#8211;7700</string>
+    <string name="application">申请</string>
+    <string name="superisor_service">齐家服务</string>
+    <string name="superisor_qusetion">常见问题</string>
+    <string name="superisor_ontact_my">联系我们</string>
+    <string name="activate">请登录齐家官网 www.jia.com 激活</string>
+    <string name="zh_share">分享</string>
+    <string name="saveTophone">保存到手机</string>
+    <string name="sendToFriend">发送朋友</string>
+    <!-- Content -->
+    <string name="content_memo">说说你的不良经历......</string>
+    <string name="content_add_memo1">+我要吐槽</string>
+    <string name="content_add_memo2">-我要吐槽</string>
+    <string name="content_content">请输入评论内容......</string>
+    <string name="del_fail">删除失败</string>
+
+    <!-- 装修助手 -->
+    <!-- 我的 -->
+    <string name="registration">签到</string>
+    <string name="qeeka_gold">金币</string>
+    <string name="gold">金币</string>
+    <string name="my_contacts">联系人</string>
+    <string name="my_album">我的相册</string>
+    <string name="my_zhuangxiujie">装修界</string>
+    <string name="my_diary">我的日记</string>
+    <string name="my_treasurebox">百宝箱</string>
+    <string name="my_moresource">更多齐家资源</string>
+    <string name="my_other">其他</string>
+    <string name="user_info_icon">头像</string>
+    <string name="user_info_name">昵称</string>
+    <string name="user_info_sex">性别</string>
+    <string name="user_info_time">装修阶段</string>
+    <string name="user_info_apartment">房型</string>
+    <string name="user_info_style">装修风格</string>
+    <string name="user_info_company">装修公司</string>
+    <string name="user_info_imge_code">我的二维码</string>
+    <string name="user_info_change_pw">修改密码</string>
+    <string name="other_item_share_app">分享装修伙伴给好友</string>
+    <string name="other_item_rating">为装修伙伴评分</string>
+    <string name="other_item_suggestions">给装修伙伴提意见</string>
+    <string name="other_item_about_app">关于装修伙伴</string>
+    <string name="other_item_check_update">检测更新</string>
+    <string name="other_item_old_version">历史版本</string>
+    <string name="other_item_push_message">消息通知</string>
+    <string name="sex_set_man">男</string>
+    <string name="sex_set_woman">女</string>
+    <string name="sex_set_secret">保密</string>
+    <string name="change_pw_new_pw">请输入新密码</string>
+    <string name="change_pw_re_enter_pw">再次输入新密码</string>
+    <string name="member_username_mobile">输入用户名或手机</string>
+    <string name="phone_contact">手机通讯录</string>
+    <string name="member_saomiao">扫二维码添加</string>
+    <string name="log_out">退出登录</string>
+    <!-- 我的 -->
+    <!-- 伙伴 -->
+    <string name="parnter_title">装修伙伴</string>
+
+    <string-array name="partener_page_foot_lsit">
+        <item> 好友请求</item>
+        <item> 精选问题推荐</item>
+        <item> 问答</item>
+        <item> 好友列表</item>
+        <item> 计划</item>
+        <item> 记账</item>
+    </string-array>
+    <string-array name="share_to_public">
+        <item>分享到新浪微博</item>
+        <item>分享到微信朋友圈</item>
+        <item>分享给微信好友</item>
+    </string-array>
+    <string-array name="jazzy_effects">
+        <item>Standard</item>
+        <item>Tablet</item>
+        <item>CubeIn</item>
+        <item>CubeOut</item>
+        <item>FlipVertical</item>
+        <item>FlipHorizontal</item>
+        <item>Stack</item>
+        <item>ZoomIn</item>
+        <item>ZoomOut</item>
+        <item>RotateUp</item>
+        <item>RotateDown</item>
+        <item>Accordion</item>
+    </string-array>
+    <!-- 伙伴 -->
+    <!-- 记账 -->
+    <string name="account_record_one">记一笔</string>
+    <string name="account">记账</string>
+    <string name="account_total">总计</string>
+    <string name="symbol">></string>
+    <string name="symbol_o">￥</string>
+    <string name="project">内容</string>
+    <string name="classify">分类</string>
+    <string name="time">时间</string>
+    <string name="zero">0</string>
+    <string name="add_introduce">请添加备注</string>
+    <string name="add_new_account_msg">请输入新支出内容</string>
+    <string name="save">保存</string>
+    <string name="modify_account">修改账目</string>
+    <string name="add_account">添加账目</string>
+    <!-- 记账 -->
+
+    <string name="add_account_success">添加账目成功!</string>
+    <string name="modify_account_success">修改账目成功!</string>
+    <string name="account_content_can_not_null">账目内容不能为空</string>
+    <string name="account_bill_can_not_null">记账金额不能为空哦</string>
+    <string name="del_success">删除成功!</string>
+    <string name="is_del_this_account">是否删除该账目!</string>
+    <!-- 记账 -->
+    <!-- 计划 -->
+    <string name="plan">计划</string>
+    <string name="plan_now">今天</string>
+    <string name="plan_later">后续</string>
+    <string name="plan_complete">已完成计划</string>
+    <string name="remark">备注:</string>
+    <string name="please_input_content">请输入内容</string>
+    <string name="please_input_remark">请输入备注</string>
+    <string name="add_plan">添加计划</string>
+    <string name="modify_plan">修改计划</string>
+    <string name="add_plan_success">添加计划成功!</string>
+    <string name="modify_plan_success">修改计划成功!</string>
+    <string name="is_del_this_plan">是否删除该条计划!</string>
+    <string name="complete_plan">标记已完成！</string>
+    <string name="resert_plan">恢复设置!</string>
+
+    <string-array name="date_item">
+        <item>取消</item>
+        <item>修改日期</item>
+        <item>清空日期</item>
+    </string-array>
+    <!-- 计划 -->
+    <!-- 提问 -->
+    <string name="make_questions">提问</string>
+    <string name="update_to_circle">同步到装修界</string>
+    <string name="describle_question">请尽量详细描述您的问题(至少5个字)</string>
+    <string name="publish">发布</string>
+    <string name="delThisphoto">删除该图!</string>
+    <string name="edit_question">请编辑您的问题!</string>
+    <string name="qijia_expert">[齐家专家]</string>
+    <string name="question">问题</string>
+    <string name="expert_a">光荣事迹</string>
+    <string name="expert_b">个人履历</string>
+    <string name="expert_c">个人寄语</string>
+    <string name="i_make_questions">我要提问</string>
+    <string name="expert_detail">专家详情</string>
+    <string name="do_favor_success">点赞成功!</string>
+    <string name="un_favor_success">取消赞成功!</string>
+    <string name="has_favoured">您已经赞过!</string>
+    <string name="no_expert_message">未获取到该专家信息!</string>
+    <string name="favor_num_head">+赞</string>
+    <string name="work_time">工作年限: </string>
+    <string name="del">删除 </string>
+    <string name="make_questions_success">提交成功，请等待专家为您解答</string>
+    <string name="feature_share_symble_left">【</string>
+    <string name="feature_share_symble_right">】---- 装修伙伴，你问我答。更多请点：</string>
+
+    <string-array name="choose_photo">
+        <item> 从手机相册选取</item>
+        <item> 拍照</item>
+    </string-array>
+
+    <!-- 选图片 -->
+    <string name="choose_from_alum">从手机相册选取</string>
+    <string name="choose_from_camera">拍照</string>
+    <string name="choose_photo_a">最多可以选择</string>
+    <string name="choose_photo_b">张图片</string>
+    <string name="choose_photo_c">您选择了</string>
+    <string name="my_photo">我的照片</string>
+    <!-- question -->
+    <string name="my_question">我的问题</string>
+    <string name="more_quesion">问题广场</string>
+    <string name="my_all_questions">全部问题</string>
+    <string name="all_questions">精选问题</string>
+    <string name="response_questions">已回答的问题</string>
+    <string name="unresponse_questions">未回答的问题</string>
+    <string name="is_delete">是否删除这条数据</string>
+    <!-- WeiBo -->
+    <string name="weibosdk_demo_toast_share_success">分享成功</string>
+    <string name="weibosdk_demo_toast_share_failed">分享失败</string>
+    <string name="weibosdk_demo_toast_share_canceled">取消分享</string>
+    <string name="weibosdk_demo_toast_share_response_args_success">收到微博发起的请求成功</string>
+    <string name="weibosdk_demo_toast_share_response_args_failed">收到客户端请求消息失败</string>
+
+    <!-- Share -->
+    <string name="weibosdk_demo_not_support_api_hint">微博客户端不支持 SDK 分享或微博客户端未安装或微博客户端是非官方版本。</string>
+    <string name="share_wb_content">齐家装修助手帮你来验收:</string>
+    <string name="xweibo">新浪微博</string>
+    <string name="weixin">微信</string>
+    <string name="pengyouquan">朋友圈</string>
+
+    <!-- Dialog -->
+    <string name="i_am">我是</string>
+    <string name="dialog_add_member">添加你为好友</string>
+    <string name="message_1">添加为家庭成员之后，家庭成员之间能共享计划和账单信息，请慎重添加!</string>
+    <string name="message_2">删除该联系人，同时删除与该联系人的聊天记录</string>
+    <string name="message_3">删除家庭成员之后，我们将删除对方所有的记账和计划信息（如需恢复，再次添加对方为家庭成员即可），请确认</string>
+    <string name="beizhu">备注</string>
+    <string name="jiaru_family">加入我的家庭</string>
+    <string name="delete_family">删除家庭成员</string>
+    <string name="delete_member">删除好友</string>
+    <string name="feature_question">精选问答</string>
+    <!-- 装修界 -->
+    <string name="circle">装修界</string>
+    <string name="ground">广场</string>
+    <string name="content_add">评论</string>
+    <string name="content_send">发送</string>
+    <string name="favour">赞</string>
+    <string name="reply_to">回复</string>
+    <string name="modify_covel_success">封面修改成功!</string>
+    <string name="input_your_interset">搜索你感兴趣的内容</string>
+    <string name="read_for_out">是否退出!</string>
+
+    <!-- 我的日记 -->
+    <string name="my_remind">我的提醒</string>
+    <string name="my_attention">我的关注</string>
+    <string name="my_comment">我的评论</string>
+    <string name="diary_comment_send">发送</string>
+    <string name="diary_comment_reply">回复</string>
+
+    <!-- 装修公司 -->
+    <string name="company_title">装修公司</string>
+    <string name="company_grade">店铺星级</string>
+    <string name="company_count">预约数量</string>
+    <string name="company_appoint">我要预约</string>
+    <string name="company_service">特色服务</string>
+    <string name="company_recommend">推荐装修日记</string>
+    <string name="my_alum">相册</string>
+    <!-- 邀请 -->
+    <string name="invitation">邀请</string>
+    <string name="invitation_to_be_friend">邀请你成为他(她)的好友</string>
+    <string name="member_delete">忽略</string>
+    <string name="member_add">同意</string>
+    <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
+    <!-- 关于 -->
+    <string name="about_content">装修伙伴是由齐家网为装修用户倾力打造的一款家庭协同装修项目管理和分享工具，你可以借助装修伙伴，与你的家庭成员共同管理装修项目，记录和分享装修过程，同时也能方便的查找你身边的装修网友，创建群，共同交流装修相关的话题，以及组织和参加各种线下活动。我们的宗旨：让装修像喝茶一样轻松</string>
+    <string name="about_contact1">任何问题请</string>
+    <string name="about_contact2">联系:</string>
+    <string name="about_contact3">期待您的意见和建议</string>
+    <string name="about_contact4">chenfan@qeeka.com</string>
+    <string name="about_contact5">		装修助手</string>
+
+</resources>

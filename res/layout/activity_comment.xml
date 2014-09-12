@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/comment_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_default"
+        layout="@layout/title_bar_with_ibtn_left_and_right" />
+
+    <FrameLayout
+        android:id="@+id/frgmt_comment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/comment_title_bar"
+        android:layout_marginBottom="@dimen/bottom_tab_height" />
+
+    <include
+        android:id="@+id/comment_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/view_diray_comment_bottom" />
+
+</RelativeLayout>
