@@ -197,7 +197,10 @@ public class ClipImageActivity extends BaseActivity implements OnClickListener {
 		dismissProgress();
 		if (task.resultDataClass == IconResult.class) {
 			avatar = ((IconResult) task.result).data.avatar;
-			syncUserIcon(application.getInfoResult().data.user_info.avatar);
+			// syncUserIcon(avatar);
+
+			application.getInfoResult().data.user_info.avatar = avatar;
+			finish();
 		} else if (task.result instanceof SyncQOResult) {
 			if ("200".equals(((SyncQOResult) task.result).msg_encrypted.statusCode)) {
 				ToastUtil.showToast(this, "同步成功");
@@ -232,6 +235,7 @@ public class ClipImageActivity extends BaseActivity implements OnClickListener {
 
 	protected Object getParam(String avatar) throws UnsupportedEncodingException {
 
+		LogUtil.logE(avatar + "::avatar");
 		String auth_info = Utils.objectToJson(application.getSalt(this).auth_info);
 		map.put("auth_info", auth_info);
 		map.put("encrypt_method", "RSA");

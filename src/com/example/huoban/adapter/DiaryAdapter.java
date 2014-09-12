@@ -15,6 +15,7 @@ import com.example.huoban.R;
 import com.example.huoban.activity.diary.DiaryDetailActivity;
 import com.example.huoban.custominterface.OnComponentSelectedListener;
 import com.example.huoban.model.DiaryData;
+import com.example.huoban.utils.LogUtil;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
@@ -78,6 +79,7 @@ public class DiaryAdapter extends BaseAdapter {
 				Intent intent = new Intent(context, DiaryDetailActivity.class);
 				intent.putExtra("diary_id", data.diary_id);
 				intent.putExtra("position", position);
+				LogUtil.logE("TAG", "diaryAdapter position="+position);
 				context.startActivity(intent);
 				if (callBack != null) {
 					callBack.onComponentSelected(0, viewHolder.view_count);

@@ -22,6 +22,7 @@ import com.example.huoban.http.HTTPConfig;
 import com.example.huoban.http.Task;
 import com.example.huoban.model.DiaryData;
 import com.example.huoban.model.DiaryListResult;
+import com.example.huoban.utils.LogUtil;
 import com.example.huoban.widget.pull.PullToRefreshBase.OnRefreshListener;
 import com.example.huoban.widget.pull.PullToRefreshListView;
 
@@ -151,6 +152,13 @@ public class DiaryFragment extends BaseFragment implements OnRefreshListener, On
 	// }
 
 	public void refreshLikeCount(int position, boolean like) {
+		// if (like && position < diaryList.size()) {
+		// diaryList.get(position).focus_num += 1;
+		// } else if (position < diaryList.size()) {
+		// if (diaryList.get(position).focus_num != 0)
+		// diaryList.get(position).focus_num -= 1;
+		// }
+		LogUtil.logE("TAG", "diaryfragment position="+position);
 		if (like) {
 			diaryList.get(position).focus_num += 1;
 		} else {

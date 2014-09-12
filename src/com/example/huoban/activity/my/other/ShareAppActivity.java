@@ -157,10 +157,13 @@ public class ShareAppActivity extends BaseActivity implements OnClickListener {
         oks.setTitle(getString(R.string.share));
         
         // text是分享文本，所有平台都需要这个字段
-        oks.setText("我正在使用装修伙伴管理我的装修，它为每个用户配备专属的装修助手，解决装修纠纷、解答装修难题，还有精选装修日记可以参考，推荐给大家！ "+APP_URL);
-        
         // imagePath是图片的本地路径，Linked-In以外的平台都支持此参数
-        oks.setImagePath(imgPath);
+        if(!Wechat.NAME.equals(platform)){
+        	oks.setImagePath(imgPath);
+        	oks.setText("我正在使用装修伙伴管理我的装修，它为每个用户配备专属的装修助手，解决装修纠纷、解答装修难题，还有精选装修日记可以参考，推荐给大家！ "+APP_URL);
+        }else{
+        	oks.setText("我正在使用装修伙伴管理我的装修，也推荐给你用用！ "+APP_URL);
+        }
         
         // imageUrl是图片的网络路径，新浪微博、人人网、QQ空间、
         //微信的两个平台、Linked-In支持此字段
@@ -171,7 +174,6 @@ public class ShareAppActivity extends BaseActivity implements OnClickListener {
         
 //        // appPath是待分享应用程序的本地路劲，仅在微信中使用
 //        oks.setAppPath(MainActivity.TEST_IMAGE);
-        
         // 是否直接分享（true则直接分享）
         oks.setSilent(silent);
         

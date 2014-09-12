@@ -35,6 +35,7 @@ import com.example.huoban.R;
 import com.example.huoban.activity.my.AlbumActivity;
 import com.example.huoban.activity.question.ChoiseAlumPhotoActivity;
 import com.example.huoban.adapter.CircleFriendAdapter;
+import com.example.huoban.adapter.CircleFriendAdapter.OnclickListener;
 import com.example.huoban.base.BaseActivity;
 import com.example.huoban.base.BaseFragment;
 import com.example.huoban.constant.StringConstant;
@@ -65,7 +66,7 @@ import com.example.huoban.widget.pull.PullToRefreshListView;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
-public class CircleFragmet extends BaseFragment implements OnRefreshListener, CircleInterface, OnClickListener,DBOperaterInterFace {
+public class CircleFragmet extends BaseFragment implements OnRefreshListener, CircleInterface, OnClickListener, DBOperaterInterFace {
 	private PullToRefreshListView mPullToRefreshListView;
 	private ListView mListView;
 
@@ -135,23 +136,25 @@ public class CircleFragmet extends BaseFragment implements OnRefreshListener, Ci
 		initHeadView(inflater);
 		initInputBat(view);
 		initAdapter();
-		operateDbData(9,null,true);
+		operateDbData(9, null, true);
 		return view;
 	}
+
 	/**
 	 * 操作数据库
+	 * 
 	 * @param id
 	 * @param object
 	 */
-	private void operateDbData(int id,Object object,boolean isShowProgress){
+	private void operateDbData(int id, Object object, boolean isShowProgress) {
 		DbParamData dbParamData = new DbParamData();
 		dbParamData.taskId = id;
 		dbParamData.object = object;
-		if(isShowProgress)
-		showProgress(null, R.string.waiting, false);
+		if (isShowProgress)
+			showProgress(null, R.string.waiting, false);
 		DataBaseManager.operateDataBase(this, dbParamData);
 	}
-	
+
 	private void initInputBat(View view) {
 		rlInputBar = (RelativeLayout) view.findViewById(R.id.content_input_layout);
 		etInput = (EditText) view.findViewById(R.id.content_input);
@@ -176,21 +179,22 @@ public class CircleFragmet extends BaseFragment implements OnRefreshListener, Ci
 			DisplayImageOptions optionsPage = new DisplayImageOptions.Builder().showImageForEmptyUri(R.drawable.bg_cover).showImageOnFail(R.drawable.bg_cover).showImageOnLoading(R.drawable.bg_cover).cacheInMemory(true).cacheOnDisc(true).build();
 
 			ImageLoader imageLoader = ImageLoader.getInstance();
-			imageLoader.displayImage(user_info.avatar, ivHead,new DisplayImageOptions.Builder().showImageForEmptyUri(R.drawable.ren).showImageOnFail(R.drawable.ren).showImageOnLoading(R.drawable.ren).cacheInMemory(true).cacheOnDisc(true).build());
-			imageLoader.displayImage(user_info.cover_url, ivCovel,optionsPage);
+			imageLoader.displayImage(user_info.avatar, ivHead, new DisplayImageOptions.Builder().showImageForEmptyUri(R.drawable.ren).showImageOnFail(R.drawable.ren).showImageOnLoading(R.drawable.ren).cacheInMemory(true).cacheOnDisc(true).build());
+			imageLoader.displayImage(user_info.cover_url, ivCovel, optionsPage);
 		}
 	}
 
 	private void initAdapter() {
 		topicList = new ArrayList<Topic>();
 		mCircleFriendAdapter = new CircleFriendAdapter(getActivity(), topicList, getWindowWidth(), this);
-//		mCircleFriendAdapter.setListener(new OnclickListener() {
-//			
-//			@Override
-//			public void Onclick(int position) {
-//				mListView.setSelection(position);
-//			}
-//		});
+
+		mCircleFriendAdapter.setListener(new OnclickListener() {
+
+			@Override
+			public void Onclick(int position) {
+				mListView.setSelection(position);
+			}
+		});
 		mListView.setAdapter(mCircleFriendAdapter);
 	}
 
@@ -226,9 +230,9 @@ public class CircleFragmet extends BaseFragment implements OnRefreshListener, Ci
 				if (circleResult.data.topic_list != null) {
 
 					topicList.addAll(circleResult.data.topic_list);
-					
+
 				}
-				if(pageIndex==1){
+				if (pageIndex == 1) {
 					/**
 					 * 存储数据库
 					 */
@@ -242,7 +246,7 @@ public class CircleFragmet extends BaseFragment implements OnRefreshListener, Ci
 				}
 			}
 			mCircleFriendAdapter.refresh(topicList);
-			
+
 		} else if (task.taskID == DO_UPDATE_COVEL) {
 			CoverResult coverResult = (CoverResult) task.result;
 			ToastUtil.showToast(getActivity(), R.string.modify_covel_success, Gravity.CENTER);
@@ -288,9 +292,9 @@ public class CircleFragmet extends BaseFragment implements OnRefreshListener, Ci
 						ToastUtil.showToast(getActivity(), R.string.un_favor_success, Gravity.CENTER);
 					}
 					backResultInterFace.doBackForHttp(DO_FAVOUR, faceResult);
-					Object [] object = {topic.topic_id,faceResult};
+					Object[] object = { topic.topic_id, faceResult };
 					operateDbData(DO_FAVOUR, object, false);
-					
+
 					backResultInterFace = null;
 					reply = null;
 					topic = null;
@@ -303,12 +307,12 @@ public class CircleFragmet extends BaseFragment implements OnRefreshListener, Ci
 					backResultInterFace.doBackForHttp(DO_COMMENT, replyResult);
 					backResultInterFace = null;
 					String ids = null;
-					if(topic!=null){
+					if (topic != null) {
 						ids = topic.topic_id;
-					}else if(reply!=null){
+					} else if (reply != null) {
 						ids = reply.topic_id;
 					}
-					Object [] objectA = {ids,replyResult};
+					Object[] objectA = { ids, replyResult };
 					operateDbData(DO_COMMENT, objectA, false);
 					topic = null;
 					reply = null;
@@ -359,8 +363,8 @@ public class CircleFragmet extends BaseFragment implements OnRefreshListener, Ci
 		map.put("user_id", uid);
 		map.put("sign", sign);
 		task.taskParam = map;
-		if(isShowProgress)
-		showProgress(null, R.string.waiting, false);
+		if (isShowProgress)
+			showProgress(null, R.string.waiting, false);
 		doTask(task);
 	}
 
@@ -375,11 +379,11 @@ public class CircleFragmet extends BaseFragment implements OnRefreshListener, Ci
 			 * 评论动态
 			 */
 			String hint = null;
-			if(object instanceof Topic){
+			if (object instanceof Topic) {
 				reply = null;
 				topic = (Topic) object;
 				hint = res.getString(R.string.content_add);
-			}else if(object instanceof Reply){
+			} else if (object instanceof Reply) {
 				topic = null;
 				reply = (Reply) object;
 				hint = res.getString(R.string.reply_to) + reply.replyer_name;
@@ -398,14 +402,14 @@ public class CircleFragmet extends BaseFragment implements OnRefreshListener, Ci
 			hideInputBar();
 			opwDelComment.showAtLocation(v, Gravity.CENTER, 0, 0);
 			break;
-//		case DO_REPIY:
-//			/**
-//			 * 回复别人的评论
-//			 */
-//			topic = null;
-//			reply = (Reply) object;
-//			makeInputBarVisible(res.getString(R.string.reply_to) + reply.replyer_name);
-//			break;
+		// case DO_REPIY:
+		// /**
+		// * 回复别人的评论
+		// */
+		// topic = null;
+		// reply = (Reply) object;
+		// makeInputBarVisible(res.getString(R.string.reply_to) + reply.replyer_name);
+		// break;
 		case DO_FAVOUR:
 			/**
 			 * 点赞或者取消
@@ -431,7 +435,7 @@ public class CircleFragmet extends BaseFragment implements OnRefreshListener, Ci
 			 * 看相册
 			 */
 			topic = (Topic) object;
-			seeAlum(topic,topic.user_id);
+			seeAlum(topic, topic.user_id);
 			break;
 
 		default:
@@ -443,10 +447,10 @@ public class CircleFragmet extends BaseFragment implements OnRefreshListener, Ci
 	/**
 	 * 看相册
 	 */
-	private void seeAlum(Topic topic,String uid) {
+	private void seeAlum(Topic topic, String uid) {
 		Intent intent = new Intent(getActivity(), AlbumActivity.class);
 		intent.putExtra("see_id", uid);
-		if(topic!=null){
+		if (topic != null) {
 			intent.putExtra("user_name", topic.user_name);
 			intent.putExtra("user_avatar", topic.user_avatar);
 		}
@@ -675,7 +679,7 @@ public class CircleFragmet extends BaseFragment implements OnRefreshListener, Ci
 			/**
 			 * 看自己的相册
 			 */
-			seeAlum(topic,uid);
+			seeAlum(topic, uid);
 			break;
 		default:
 			break;
@@ -845,7 +849,7 @@ public class CircleFragmet extends BaseFragment implements OnRefreshListener, Ci
 
 	@Override
 	public Object getDataFromDB(DbParamData dbParamData) {
-		if(dbParamData==null){
+		if (dbParamData == null) {
 			return null;
 		}
 		Object object = null;
@@ -854,16 +858,15 @@ public class CircleFragmet extends BaseFragment implements OnRefreshListener, Ci
 			/**
 			 * 从数据库读取装修界列表
 			 */
-			
-			
-			object = DBOperateUtils.readCircleListFromDb(getActivity(),StringConstant.ONE);
+
+			object = DBOperateUtils.readCircleListFromDb(getActivity(), StringConstant.ONE);
 			break;
 		case 10:
 			/**
 			 * 存储装修界列表
 			 */
-			ArrayList<Topic>list = (ArrayList<Topic>) dbParamData.object;
-			DBOperateUtils.saveCircleListToDb(getActivity(), list,StringConstant.ONE);
+			ArrayList<Topic> list = (ArrayList<Topic>) dbParamData.object;
+			DBOperateUtils.saveCircleListToDb(getActivity(), list, StringConstant.ONE);
 			break;
 		case DO_DEL:
 			/**
@@ -871,32 +874,32 @@ public class CircleFragmet extends BaseFragment implements OnRefreshListener, Ci
 			 */
 			String topic_id = (String) dbParamData.object;
 			DBOperateUtils.delReplyForCircle(getActivity(), topic_id);
-			
+
 			break;
 		case DO_COMMENT:
 			/**
 			 * 添加评论
 			 */
-			Object [] objectA = (Object[]) dbParamData.object;
+			Object[] objectA = (Object[]) dbParamData.object;
 			String topic_idB = (String) objectA[0];
 			ReplyResult replyResult = (ReplyResult) objectA[1];
-			DBOperateUtils.upDateReplyForCircle(getActivity(), topic_idB, replyResult,StringConstant.ONE);
+			DBOperateUtils.upDateReplyForCircle(getActivity(), topic_idB, replyResult, StringConstant.ONE);
 			break;
 		case DO_DEL_DYNAMIC:
 			/**
 			 * 删除动态
 			 */
 			String topic_idA = (String) dbParamData.object;
-			DBOperateUtils.delDynamicForCircle(getActivity(), topic_idA,StringConstant.ONE);
+			DBOperateUtils.delDynamicForCircle(getActivity(), topic_idA, StringConstant.ONE);
 			break;
 		case DO_FAVOUR:
 			/**
 			 * 点赞
 			 */
-			Object [] objectC = (Object[]) dbParamData.object;
+			Object[] objectC = (Object[]) dbParamData.object;
 			String topic_idC = (String) objectC[0];
 			FaceResult faceResult = (FaceResult) objectC[1];
-			DBOperateUtils.upDatePriseForCircle(getActivity(), topic_idC, faceResult,StringConstant.ONE);
+			DBOperateUtils.upDatePriseForCircle(getActivity(), topic_idC, faceResult, StringConstant.ONE);
 			break;
 
 		default:
@@ -907,14 +910,14 @@ public class CircleFragmet extends BaseFragment implements OnRefreshListener, Ci
 
 	@Override
 	public void returnDataFromDb(DbParamData dbParamData) {
-		if(dbParamData==null){
+		if (dbParamData == null) {
 			return;
 		}
 		switch (dbParamData.taskId) {
 		case 9:
-			ArrayList<Topic>list = (ArrayList<Topic>) dbParamData.object;
-			LogUtil.logE("list"+list.size());
-			if(list!=null){
+			ArrayList<Topic> list = (ArrayList<Topic>) dbParamData.object;
+			LogUtil.logE("list" + list.size());
+			if (list != null) {
 				topicList.addAll(list);
 				mCircleFriendAdapter.refresh(topicList);
 			}
@@ -924,12 +927,12 @@ public class CircleFragmet extends BaseFragment implements OnRefreshListener, Ci
 		default:
 			break;
 		}
-		
-		
+
 	}
+
 	@Override
 	protected String setFragmentName() {
 		return "CircleFragmet";
 	}
-	
+
 }

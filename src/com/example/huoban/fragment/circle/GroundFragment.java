@@ -26,6 +26,7 @@ import com.example.huoban.R;
 import com.example.huoban.activity.my.AlbumActivity;
 import com.example.huoban.activity.my.contacts.ContactInfoActivity;
 import com.example.huoban.adapter.CircleFriendAdapter;
+import com.example.huoban.adapter.CircleFriendAdapter.OnclickListener;
 import com.example.huoban.base.BaseActivity;
 import com.example.huoban.base.BaseFragment;
 import com.example.huoban.constant.StringConstant;
@@ -162,14 +163,13 @@ public class GroundFragment extends BaseFragment implements OnRefreshListener,
 		topicList = new ArrayList<Topic>();
 		mCircleFriendAdapter = new CircleFriendAdapter(getActivity(),
 				topicList, getWindowWidth(), this);
-//		mCircleFriendAdapter.setListener(new OnclickListener() {
-//			
-//			@Override
-//			public void Onclick(int position) {
-//				mListView.setSelection(position);
-//				
-//			}
-//		});
+		mCircleFriendAdapter.setListener(new OnclickListener() {
+		
+		@Override
+		public void Onclick(int position) {
+			mListView.setSelection(position);
+		}
+	});
 		mListView.setAdapter(mCircleFriendAdapter);
 	}
 

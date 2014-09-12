@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.huoban.R;
 import com.example.huoban.base.BaseActivity;
+import com.example.huoban.utils.LogUtil;
 
 /**
  * Bana详细内容
@@ -35,6 +36,10 @@ public class BanaDetailActivity extends BaseActivity {
 		Bundle bundle = getIntent().getExtras();
 		String title = bundle.getString("title");
 		String url = bundle.getString("url");
+		LogUtil.logE("url = " + url);
+		if (!url.startsWith("http://")) {
+			url = "http://" + url;
+		}
 		if (TextUtils.isEmpty(title)) {
 			title = "";
 		}
@@ -52,11 +57,10 @@ public class BanaDetailActivity extends BaseActivity {
 		mWebView.getSettings().setJavaScriptEnabled(true);
 		mWebView.setHorizontalScrollBarEnabled(false);
 		mWebView.setVerticalScrollBarEnabled(false);
-		mWebView.getSettings()
-				.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
-		
-		mWebView.getSettings().setUseWideViewPort(true); 
-		mWebView.getSettings().setLoadWithOverviewMode(true); 
+		mWebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+
+		mWebView.getSettings().setUseWideViewPort(true);
+		mWebView.getSettings().setLoadWithOverviewMode(true);
 		// 如果页面中链接，如果希望点击链接继续在当前browser中响应，而不是新开Android的系统browser中响应该链接，必须覆盖
 		// webview的WebViewClient对象。
 		mWebView.setWebViewClient(new WebViewClient() {

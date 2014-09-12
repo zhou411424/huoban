@@ -114,6 +114,7 @@ public class DiaryDetailActivity extends BaseActivity implements OnClickListener
 		Intent intent = new Intent();
 		intent.setAction(HomeActivity.ACTION_DIARY_FOCUS);
 		intent.putExtra("position", position);
+		LogUtil.logE("TAG", "diaryDetailActivity position="+position);
 		switch (task.taskID) {
 		case ADD_FOCUS:
 			if (result.status == 1) {

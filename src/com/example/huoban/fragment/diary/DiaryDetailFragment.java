@@ -489,7 +489,7 @@ public class DiaryDetailFragment extends BaseFragment implements OnRefreshListen
 		}
 		if (intent != null) {
 			intent.putExtra("companyDetail", companyDetail);
-			intent.putExtra("position", position);
+			intent.putExtra("position", this.position);
 			intent.putExtra("graduate", (Serializable) graduate);
 			intent.putExtra("category", category);
 			startActivity(intent);
