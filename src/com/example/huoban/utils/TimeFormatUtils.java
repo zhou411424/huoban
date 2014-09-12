@@ -382,7 +382,7 @@ public class TimeFormatUtils {
 	 * */
 	@SuppressLint("SimpleDateFormat")
 	public static String getDateToHm(String date){
-		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		try {
 			return String.valueOf(simpleDateFormat.parse(date).getTime());
 		} catch (Exception e) {
