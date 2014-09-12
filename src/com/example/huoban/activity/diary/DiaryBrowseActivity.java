@@ -235,7 +235,7 @@ public class DiaryBrowseActivity extends BaseActivity implements OnClickListener
 			}
 			fragment.setCurrentItem(2);
 		} else if (categroy == 1) {
-			fragment.setCurrentItem(3 + (graduate == null ? 0 : 1));
+			fragment.setCurrentItem(2 + (graduate == null ? 0 : 1));
 		} else {
 			for (int i = 0; i < categroy - 1; i++) {
 				if (diary_list.get(i).content != null)
